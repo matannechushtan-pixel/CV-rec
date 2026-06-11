@@ -1,0 +1,3920 @@
+[
+  {
+    "id": "synthetic-001",
+    "title": "Data Scientist",
+    "skills": [
+      "Computer Vision",
+      "TensorFlow",
+      "Scikit-learn",
+      "Deep Learning"
+    ],
+    "years_experience": 4,
+    "education_level": "Bachelor's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Research Scientist",
+      "Data Scientist",
+      "Data Analyst",
+      "Machine Learning Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-002",
+    "title": "Software Engineer",
+    "skills": [
+      "JavaScript",
+      "React",
+      "CI/CD",
+      "AWS"
+    ],
+    "years_experience": 0,
+    "education_level": "Associate's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Platform Engineer",
+      "DevOps Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-003",
+    "title": "Growth Marketer",
+    "skills": [
+      "A/B Testing",
+      "Email Marketing",
+      "SEO",
+      "Google Analytics",
+      "Brand Strategy",
+      "Social Media",
+      "Paid Media"
+    ],
+    "years_experience": 8,
+    "education_level": "Master's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Content Strategist",
+      "Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-004",
+    "title": "Financial Analyst",
+    "skills": [
+      "Excel",
+      "Accounting",
+      "GAAP",
+      "Valuation",
+      "Risk Management",
+      "Financial Modeling",
+      "Budgeting"
+    ],
+    "years_experience": 3,
+    "education_level": "Bootcamp",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Risk Analyst",
+      "FP&A Manager"
+    ]
+  },
+  {
+    "id": "synthetic-005",
+    "title": "Applied Scientist",
+    "skills": [
+      "Spark",
+      "Scikit-learn",
+      "Computer Vision",
+      "SQL",
+      "Python",
+      "Tableau"
+    ],
+    "years_experience": 9,
+    "education_level": "Bachelor's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Scientist",
+      "AI Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-006",
+    "title": "Frontend Engineer",
+    "skills": [
+      "REST APIs",
+      "Go",
+      "TypeScript",
+      "CI/CD",
+      "System Design",
+      "React",
+      "Node.js"
+    ],
+    "years_experience": 2,
+    "education_level": "Associate's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Backend Engineer",
+      "Platform Engineer",
+      "Software Engineer",
+      "DevOps Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-007",
+    "title": "SEO Specialist",
+    "skills": [
+      "CRM",
+      "Marketing Automation",
+      "Social Media",
+      "Brand Strategy",
+      "Copywriting",
+      "SEO"
+    ],
+    "years_experience": 7,
+    "education_level": "Bachelor's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Brand Manager",
+      "Content Strategist",
+      "Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-008",
+    "title": "Investment Analyst",
+    "skills": [
+      "Budgeting",
+      "SQL",
+      "Risk Management",
+      "GAAP",
+      "Excel",
+      "Forecasting"
+    ],
+    "years_experience": 4,
+    "education_level": "Master's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Risk Analyst",
+      "FP&A Manager",
+      "Investment Analyst",
+      "Finance Manager"
+    ]
+  },
+  {
+    "id": "synthetic-009",
+    "title": "Applied Scientist",
+    "skills": [
+      "PyTorch",
+      "Scikit-learn",
+      "Pandas",
+      "Data Visualization",
+      "A/B Testing",
+      "SQL",
+      "Python"
+    ],
+    "years_experience": 3,
+    "education_level": "Master's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Machine Learning Engineer",
+      "AI Engineer",
+      "Data Analyst",
+      "Data Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-010",
+    "title": "Full Stack Developer",
+    "skills": [
+      "PostgreSQL",
+      "Kubernetes",
+      "AWS",
+      "Node.js",
+      "Microservices",
+      "Python",
+      "JavaScript"
+    ],
+    "years_experience": 8,
+    "education_level": "PhD",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Full Stack Developer",
+      "DevOps Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-011",
+    "title": "Growth Marketer",
+    "skills": [
+      "SEO",
+      "Email Marketing",
+      "Marketing Automation",
+      "Google Analytics",
+      "A/B Testing",
+      "CRM",
+      "Paid Media"
+    ],
+    "years_experience": 6,
+    "education_level": "Master's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Growth Marketer",
+      "Marketing Manager",
+      "Content Strategist"
+    ]
+  },
+  {
+    "id": "synthetic-012",
+    "title": "Accountant",
+    "skills": [
+      "Financial Modeling",
+      "Excel",
+      "Accounting",
+      "Valuation",
+      "GAAP",
+      "Financial Reporting",
+      "Risk Management"
+    ],
+    "years_experience": 2,
+    "education_level": "Bachelor's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Investment Analyst",
+      "Financial Analyst",
+      "FP&A Manager",
+      "Risk Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-013",
+    "title": "Machine Learning Engineer",
+    "skills": [
+      "Data Visualization",
+      "Pandas",
+      "TensorFlow",
+      "MLOps",
+      "Spark",
+      "Statistics",
+      "Scikit-learn"
+    ],
+    "years_experience": 6,
+    "education_level": "PhD",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Analyst",
+      "AI Engineer",
+      "Research Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-014",
+    "title": "Full Stack Developer",
+    "skills": [
+      "React",
+      "System Design",
+      "JavaScript",
+      "Go"
+    ],
+    "years_experience": 0,
+    "education_level": "Associate's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Backend Engineer",
+      "Platform Engineer",
+      "Software Engineer",
+      "Full Stack Developer"
+    ]
+  },
+  {
+    "id": "synthetic-015",
+    "title": "Digital Marketing Specialist",
+    "skills": [
+      "Social Media",
+      "Content Strategy",
+      "SEO",
+      "Brand Strategy"
+    ],
+    "years_experience": 2,
+    "education_level": "Associate's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Content Strategist",
+      "Brand Manager"
+    ]
+  },
+  {
+    "id": "synthetic-016",
+    "title": "Investment Analyst",
+    "skills": [
+      "GAAP",
+      "Financial Reporting",
+      "SQL",
+      "Budgeting",
+      "Risk Management"
+    ],
+    "years_experience": 15,
+    "education_level": "Bootcamp",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Financial Analyst",
+      "Risk Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-017",
+    "title": "ML Researcher",
+    "skills": [
+      "Statistics",
+      "MLOps",
+      "A/B Testing",
+      "Computer Vision",
+      "Python",
+      "SQL"
+    ],
+    "years_experience": 1,
+    "education_level": "Bootcamp",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Analyst",
+      "Data Scientist",
+      "AI Engineer",
+      "Research Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-018",
+    "title": "Backend Engineer",
+    "skills": [
+      "TypeScript",
+      "Docker",
+      "System Design",
+      "Node.js",
+      "Kubernetes",
+      "React",
+      "JavaScript"
+    ],
+    "years_experience": 14,
+    "education_level": "Associate's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Software Engineer",
+      "Platform Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-019",
+    "title": "Marketing Manager",
+    "skills": [
+      "Google Analytics",
+      "Copywriting",
+      "Paid Media",
+      "Marketing Automation",
+      "Content Strategy"
+    ],
+    "years_experience": 12,
+    "education_level": "Bachelor's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Brand Manager",
+      "Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-020",
+    "title": "FP&A Manager",
+    "skills": [
+      "SQL",
+      "Valuation",
+      "Risk Management",
+      "Financial Reporting",
+      "Excel",
+      "Power BI"
+    ],
+    "years_experience": 9,
+    "education_level": "Master's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Risk Analyst",
+      "Financial Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-021",
+    "title": "Data Analyst",
+    "skills": [
+      "Python",
+      "Spark",
+      "A/B Testing",
+      "Data Visualization"
+    ],
+    "years_experience": 5,
+    "education_level": "Bachelor's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Scientist",
+      "Machine Learning Engineer",
+      "Research Scientist",
+      "Data Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-022",
+    "title": "Site Reliability Engineer",
+    "skills": [
+      "Docker",
+      "JavaScript",
+      "PostgreSQL",
+      "React",
+      "Microservices"
+    ],
+    "years_experience": 1,
+    "education_level": "Associate's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "DevOps Engineer",
+      "Full Stack Developer"
+    ]
+  },
+  {
+    "id": "synthetic-023",
+    "title": "Content Strategist",
+    "skills": [
+      "CRM",
+      "Brand Strategy",
+      "Social Media",
+      "Email Marketing",
+      "Marketing Automation"
+    ],
+    "years_experience": 4,
+    "education_level": "PhD",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Content Strategist",
+      "Marketing Manager",
+      "Brand Manager"
+    ]
+  },
+  {
+    "id": "synthetic-024",
+    "title": "FP&A Manager",
+    "skills": [
+      "Excel",
+      "Power BI",
+      "Budgeting",
+      "Valuation"
+    ],
+    "years_experience": 4,
+    "education_level": "PhD",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Finance Manager",
+      "FP&A Manager"
+    ]
+  },
+  {
+    "id": "synthetic-025",
+    "title": "Data Analyst",
+    "skills": [
+      "A/B Testing",
+      "Tableau",
+      "Data Visualization",
+      "Computer Vision",
+      "TensorFlow"
+    ],
+    "years_experience": 0,
+    "education_level": "Associate's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Scientist",
+      "Machine Learning Engineer",
+      "AI Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-026",
+    "title": "Software Engineer",
+    "skills": [
+      "Microservices",
+      "AWS",
+      "TypeScript",
+      "Node.js"
+    ],
+    "years_experience": 9,
+    "education_level": "Associate's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Full Stack Developer",
+      "Backend Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-027",
+    "title": "Digital Marketing Specialist",
+    "skills": [
+      "Marketing Automation",
+      "Paid Media",
+      "Email Marketing",
+      "SEO",
+      "A/B Testing",
+      "Brand Strategy"
+    ],
+    "years_experience": 13,
+    "education_level": "PhD",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Marketing Manager",
+      "Content Strategist"
+    ]
+  },
+  {
+    "id": "synthetic-028",
+    "title": "Investment Analyst",
+    "skills": [
+      "Forecasting",
+      "SQL",
+      "Power BI",
+      "Risk Management",
+      "Valuation",
+      "Financial Modeling"
+    ],
+    "years_experience": 3,
+    "education_level": "Bachelor's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Finance Manager",
+      "Financial Analyst",
+      "Risk Analyst",
+      "Investment Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-029",
+    "title": "ML Researcher",
+    "skills": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "MLOps",
+      "Deep Learning"
+    ],
+    "years_experience": 6,
+    "education_level": "Master's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Scientist",
+      "Data Analyst",
+      "AI Engineer",
+      "Machine Learning Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-030",
+    "title": "DevOps Engineer",
+    "skills": [
+      "React",
+      "TypeScript",
+      "CI/CD",
+      "Docker",
+      "Python"
+    ],
+    "years_experience": 5,
+    "education_level": "PhD",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Backend Engineer",
+      "Full Stack Developer",
+      "Software Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-031",
+    "title": "Digital Marketing Specialist",
+    "skills": [
+      "Copywriting",
+      "SEO",
+      "Paid Media",
+      "Social Media"
+    ],
+    "years_experience": 6,
+    "education_level": "Bootcamp",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Content Strategist",
+      "Growth Marketer",
+      "Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-032",
+    "title": "Financial Analyst",
+    "skills": [
+      "Risk Management",
+      "Accounting",
+      "Valuation",
+      "Excel",
+      "Financial Reporting"
+    ],
+    "years_experience": 8,
+    "education_level": "PhD",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Risk Analyst",
+      "Investment Analyst",
+      "FP&A Manager",
+      "Finance Manager"
+    ]
+  },
+  {
+    "id": "synthetic-033",
+    "title": "Data Scientist",
+    "skills": [
+      "MLOps",
+      "TensorFlow",
+      "Pandas",
+      "Spark"
+    ],
+    "years_experience": 8,
+    "education_level": "Bachelor's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Research Scientist",
+      "AI Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-034",
+    "title": "Frontend Engineer",
+    "skills": [
+      "Docker",
+      "PostgreSQL",
+      "AWS",
+      "JavaScript",
+      "System Design",
+      "React"
+    ],
+    "years_experience": 8,
+    "education_level": "Bachelor's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "DevOps Engineer",
+      "Software Engineer",
+      "Full Stack Developer",
+      "Platform Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-035",
+    "title": "Content Strategist",
+    "skills": [
+      "Content Strategy",
+      "Brand Strategy",
+      "A/B Testing",
+      "CRM",
+      "Marketing Automation",
+      "Google Analytics",
+      "Email Marketing"
+    ],
+    "years_experience": 9,
+    "education_level": "Bootcamp",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Brand Manager",
+      "Content Strategist",
+      "Digital Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-036",
+    "title": "Investment Analyst",
+    "skills": [
+      "Risk Management",
+      "Financial Reporting",
+      "Forecasting",
+      "Valuation",
+      "Budgeting"
+    ],
+    "years_experience": 0,
+    "education_level": "PhD",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Finance Manager",
+      "Investment Analyst",
+      "FP&A Manager"
+    ]
+  },
+  {
+    "id": "synthetic-037",
+    "title": "Applied Scientist",
+    "skills": [
+      "A/B Testing",
+      "MLOps",
+      "Tableau",
+      "NLP",
+      "Scikit-learn",
+      "Data Visualization"
+    ],
+    "years_experience": 15,
+    "education_level": "Master's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Scientist",
+      "Data Analyst",
+      "AI Engineer",
+      "Machine Learning Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-038",
+    "title": "Software Engineer",
+    "skills": [
+      "REST APIs",
+      "Node.js",
+      "React",
+      "Microservices",
+      "TypeScript"
+    ],
+    "years_experience": 0,
+    "education_level": "Bachelor's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "DevOps Engineer",
+      "Software Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-039",
+    "title": "SEO Specialist",
+    "skills": [
+      "CRM",
+      "A/B Testing",
+      "Social Media",
+      "Copywriting",
+      "Marketing Automation",
+      "Paid Media",
+      "Content Strategy"
+    ],
+    "years_experience": 4,
+    "education_level": "Bachelor's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Brand Manager",
+      "Growth Marketer"
+    ]
+  },
+  {
+    "id": "synthetic-040",
+    "title": "Investment Analyst",
+    "skills": [
+      "Financial Modeling",
+      "Power BI",
+      "Budgeting",
+      "Excel",
+      "GAAP",
+      "SQL",
+      "Risk Management"
+    ],
+    "years_experience": 10,
+    "education_level": "Bootcamp",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Risk Analyst",
+      "Investment Analyst",
+      "FP&A Manager",
+      "Finance Manager"
+    ]
+  },
+  {
+    "id": "synthetic-041",
+    "title": "Machine Learning Engineer",
+    "skills": [
+      "A/B Testing",
+      "TensorFlow",
+      "Deep Learning",
+      "Scikit-learn",
+      "NLP",
+      "Tableau",
+      "Data Visualization"
+    ],
+    "years_experience": 15,
+    "education_level": "Master's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "AI Engineer",
+      "Data Scientist",
+      "Data Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-042",
+    "title": "Frontend Engineer",
+    "skills": [
+      "Node.js",
+      "Go",
+      "CI/CD",
+      "AWS",
+      "JavaScript"
+    ],
+    "years_experience": 4,
+    "education_level": "Master's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "DevOps Engineer",
+      "Backend Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-043",
+    "title": "Digital Marketing Specialist",
+    "skills": [
+      "Content Strategy",
+      "Copywriting",
+      "A/B Testing",
+      "Brand Strategy",
+      "Email Marketing"
+    ],
+    "years_experience": 14,
+    "education_level": "Bootcamp",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Growth Marketer",
+      "Brand Manager"
+    ]
+  },
+  {
+    "id": "synthetic-044",
+    "title": "FP&A Manager",
+    "skills": [
+      "GAAP",
+      "Risk Management",
+      "SQL",
+      "Financial Modeling"
+    ],
+    "years_experience": 11,
+    "education_level": "PhD",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Investment Analyst",
+      "Finance Manager",
+      "Risk Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-045",
+    "title": "Machine Learning Engineer",
+    "skills": [
+      "Statistics",
+      "A/B Testing",
+      "Python",
+      "MLOps",
+      "PyTorch",
+      "Computer Vision"
+    ],
+    "years_experience": 5,
+    "education_level": "Bootcamp",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Research Scientist",
+      "Data Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-046",
+    "title": "Full Stack Developer",
+    "skills": [
+      "JavaScript",
+      "REST APIs",
+      "Docker",
+      "TypeScript"
+    ],
+    "years_experience": 14,
+    "education_level": "Master's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Full Stack Developer",
+      "DevOps Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-047",
+    "title": "Content Strategist",
+    "skills": [
+      "Paid Media",
+      "Brand Strategy",
+      "A/B Testing",
+      "Copywriting",
+      "Google Analytics"
+    ],
+    "years_experience": 13,
+    "education_level": "PhD",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Brand Manager",
+      "Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-048",
+    "title": "Finance Manager",
+    "skills": [
+      "Accounting",
+      "Budgeting",
+      "Excel",
+      "Financial Modeling"
+    ],
+    "years_experience": 0,
+    "education_level": "Master's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Financial Analyst",
+      "Finance Manager"
+    ]
+  },
+  {
+    "id": "synthetic-049",
+    "title": "Machine Learning Engineer",
+    "skills": [
+      "A/B Testing",
+      "NLP",
+      "SQL",
+      "Spark",
+      "Scikit-learn"
+    ],
+    "years_experience": 14,
+    "education_level": "PhD",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Machine Learning Engineer",
+      "Data Scientist",
+      "AI Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-050",
+    "title": "Frontend Engineer",
+    "skills": [
+      "PostgreSQL",
+      "Python",
+      "Node.js",
+      "System Design"
+    ],
+    "years_experience": 12,
+    "education_level": "Bootcamp",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Backend Engineer",
+      "Software Engineer",
+      "Full Stack Developer",
+      "DevOps Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-051",
+    "title": "Marketing Manager",
+    "skills": [
+      "CRM",
+      "A/B Testing",
+      "Content Strategy",
+      "SEO",
+      "Google Analytics",
+      "Email Marketing"
+    ],
+    "years_experience": 13,
+    "education_level": "PhD",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Digital Marketing Manager",
+      "Content Strategist"
+    ]
+  },
+  {
+    "id": "synthetic-052",
+    "title": "Financial Analyst",
+    "skills": [
+      "SQL",
+      "Excel",
+      "Risk Management",
+      "Accounting",
+      "Financial Reporting",
+      "Budgeting",
+      "GAAP"
+    ],
+    "years_experience": 13,
+    "education_level": "Master's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Risk Analyst",
+      "FP&A Manager",
+      "Investment Analyst",
+      "Finance Manager"
+    ]
+  },
+  {
+    "id": "synthetic-053",
+    "title": "ML Researcher",
+    "skills": [
+      "Tableau",
+      "Computer Vision",
+      "Spark",
+      "TensorFlow",
+      "PyTorch",
+      "Scikit-learn",
+      "SQL"
+    ],
+    "years_experience": 8,
+    "education_level": "Bootcamp",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "AI Engineer",
+      "Research Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-054",
+    "title": "Frontend Engineer",
+    "skills": [
+      "Kubernetes",
+      "Go",
+      "TypeScript",
+      "System Design"
+    ],
+    "years_experience": 6,
+    "education_level": "PhD",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Full Stack Developer",
+      "Platform Engineer",
+      "DevOps Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-055",
+    "title": "Digital Marketing Specialist",
+    "skills": [
+      "Marketing Automation",
+      "SEO",
+      "CRM",
+      "Social Media",
+      "A/B Testing",
+      "Content Strategy"
+    ],
+    "years_experience": 13,
+    "education_level": "Bootcamp",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Growth Marketer",
+      "Brand Manager",
+      "Content Strategist",
+      "Digital Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-056",
+    "title": "FP&A Manager",
+    "skills": [
+      "Excel",
+      "Valuation",
+      "Budgeting",
+      "Risk Management"
+    ],
+    "years_experience": 7,
+    "education_level": "PhD",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Risk Analyst",
+      "FP&A Manager",
+      "Finance Manager",
+      "Investment Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-057",
+    "title": "ML Researcher",
+    "skills": [
+      "PyTorch",
+      "Computer Vision",
+      "A/B Testing",
+      "TensorFlow",
+      "Tableau",
+      "NLP"
+    ],
+    "years_experience": 7,
+    "education_level": "Bachelor's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Machine Learning Engineer",
+      "Data Analyst",
+      "Data Scientist",
+      "AI Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-058",
+    "title": "Backend Engineer",
+    "skills": [
+      "Microservices",
+      "Kubernetes",
+      "Node.js",
+      "PostgreSQL",
+      "AWS"
+    ],
+    "years_experience": 9,
+    "education_level": "Bachelor's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Full Stack Developer",
+      "Backend Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-059",
+    "title": "Content Strategist",
+    "skills": [
+      "Email Marketing",
+      "SEO",
+      "Marketing Automation",
+      "Google Analytics",
+      "Paid Media"
+    ],
+    "years_experience": 1,
+    "education_level": "Bachelor's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Content Strategist",
+      "Growth Marketer",
+      "Digital Marketing Manager",
+      "Brand Manager"
+    ]
+  },
+  {
+    "id": "synthetic-060",
+    "title": "Financial Analyst",
+    "skills": [
+      "GAAP",
+      "Valuation",
+      "SQL",
+      "Power BI"
+    ],
+    "years_experience": 14,
+    "education_level": "PhD",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Financial Analyst",
+      "FP&A Manager"
+    ]
+  },
+  {
+    "id": "synthetic-061",
+    "title": "ML Researcher",
+    "skills": [
+      "Tableau",
+      "SQL",
+      "Statistics",
+      "A/B Testing"
+    ],
+    "years_experience": 2,
+    "education_level": "Associate's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Scientist",
+      "Machine Learning Engineer",
+      "Research Scientist",
+      "AI Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-062",
+    "title": "Software Engineer",
+    "skills": [
+      "JavaScript",
+      "AWS",
+      "Docker",
+      "PostgreSQL",
+      "REST APIs"
+    ],
+    "years_experience": 7,
+    "education_level": "Associate's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "DevOps Engineer",
+      "Platform Engineer",
+      "Backend Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-063",
+    "title": "Brand Manager",
+    "skills": [
+      "Email Marketing",
+      "A/B Testing",
+      "SEO",
+      "Content Strategy",
+      "Copywriting",
+      "Paid Media",
+      "Brand Strategy"
+    ],
+    "years_experience": 8,
+    "education_level": "Bachelor's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Growth Marketer",
+      "Digital Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-064",
+    "title": "Risk Analyst",
+    "skills": [
+      "Forecasting",
+      "Financial Modeling",
+      "Risk Management",
+      "SQL"
+    ],
+    "years_experience": 15,
+    "education_level": "PhD",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Finance Manager",
+      "FP&A Manager"
+    ]
+  },
+  {
+    "id": "synthetic-065",
+    "title": "Data Analyst",
+    "skills": [
+      "SQL",
+      "NLP",
+      "Scikit-learn",
+      "TensorFlow",
+      "Tableau",
+      "Spark",
+      "Deep Learning"
+    ],
+    "years_experience": 13,
+    "education_level": "Bachelor's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Machine Learning Engineer",
+      "Research Scientist",
+      "AI Engineer",
+      "Data Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-066",
+    "title": "Software Engineer",
+    "skills": [
+      "TypeScript",
+      "CI/CD",
+      "Node.js",
+      "PostgreSQL"
+    ],
+    "years_experience": 9,
+    "education_level": "Bootcamp",
+    "industry": "Tech",
+    "preferred_roles": [
+      "DevOps Engineer",
+      "Full Stack Developer"
+    ]
+  },
+  {
+    "id": "synthetic-067",
+    "title": "Digital Marketing Specialist",
+    "skills": [
+      "Email Marketing",
+      "Marketing Automation",
+      "A/B Testing",
+      "Paid Media",
+      "Social Media",
+      "SEO",
+      "CRM"
+    ],
+    "years_experience": 1,
+    "education_level": "Bootcamp",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Content Strategist",
+      "Digital Marketing Manager",
+      "Marketing Manager",
+      "Brand Manager"
+    ]
+  },
+  {
+    "id": "synthetic-068",
+    "title": "Investment Analyst",
+    "skills": [
+      "Financial Reporting",
+      "Valuation",
+      "Financial Modeling",
+      "Forecasting"
+    ],
+    "years_experience": 15,
+    "education_level": "Associate's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Investment Analyst",
+      "FP&A Manager",
+      "Financial Analyst",
+      "Finance Manager"
+    ]
+  },
+  {
+    "id": "synthetic-069",
+    "title": "ML Researcher",
+    "skills": [
+      "A/B Testing",
+      "PyTorch",
+      "Statistics",
+      "Tableau"
+    ],
+    "years_experience": 10,
+    "education_level": "Bachelor's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Analyst",
+      "AI Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-070",
+    "title": "Site Reliability Engineer",
+    "skills": [
+      "Node.js",
+      "REST APIs",
+      "Docker",
+      "AWS",
+      "Python",
+      "Kubernetes",
+      "JavaScript"
+    ],
+    "years_experience": 10,
+    "education_level": "PhD",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Software Engineer",
+      "DevOps Engineer",
+      "Full Stack Developer"
+    ]
+  },
+  {
+    "id": "synthetic-071",
+    "title": "Marketing Manager",
+    "skills": [
+      "Copywriting",
+      "SEO",
+      "Social Media",
+      "Brand Strategy",
+      "Email Marketing",
+      "Marketing Automation",
+      "Paid Media"
+    ],
+    "years_experience": 1,
+    "education_level": "Master's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Digital Marketing Manager",
+      "Growth Marketer",
+      "Brand Manager"
+    ]
+  },
+  {
+    "id": "synthetic-072",
+    "title": "FP&A Manager",
+    "skills": [
+      "Excel",
+      "Financial Modeling",
+      "Budgeting",
+      "Forecasting",
+      "SQL",
+      "Valuation",
+      "GAAP"
+    ],
+    "years_experience": 13,
+    "education_level": "Bachelor's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Financial Analyst",
+      "Investment Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-073",
+    "title": "Data Scientist",
+    "skills": [
+      "A/B Testing",
+      "Computer Vision",
+      "TensorFlow",
+      "Data Visualization",
+      "Deep Learning"
+    ],
+    "years_experience": 13,
+    "education_level": "Bootcamp",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Machine Learning Engineer",
+      "AI Engineer",
+      "Data Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-074",
+    "title": "Backend Engineer",
+    "skills": [
+      "React",
+      "PostgreSQL",
+      "AWS",
+      "TypeScript",
+      "JavaScript",
+      "Node.js",
+      "Docker"
+    ],
+    "years_experience": 10,
+    "education_level": "Associate's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Software Engineer",
+      "Full Stack Developer",
+      "DevOps Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-075",
+    "title": "Content Strategist",
+    "skills": [
+      "Google Analytics",
+      "Paid Media",
+      "Marketing Automation",
+      "A/B Testing",
+      "CRM",
+      "Copywriting",
+      "Email Marketing"
+    ],
+    "years_experience": 12,
+    "education_level": "Bootcamp",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Growth Marketer",
+      "Digital Marketing Manager",
+      "Content Strategist"
+    ]
+  },
+  {
+    "id": "synthetic-076",
+    "title": "FP&A Manager",
+    "skills": [
+      "Risk Management",
+      "Financial Modeling",
+      "Accounting",
+      "SQL",
+      "Power BI"
+    ],
+    "years_experience": 12,
+    "education_level": "Bootcamp",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Finance Manager",
+      "Investment Analyst",
+      "Financial Analyst",
+      "FP&A Manager"
+    ]
+  },
+  {
+    "id": "synthetic-077",
+    "title": "Applied Scientist",
+    "skills": [
+      "Tableau",
+      "SQL",
+      "A/B Testing",
+      "MLOps",
+      "Data Visualization",
+      "Deep Learning"
+    ],
+    "years_experience": 0,
+    "education_level": "Master's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Machine Learning Engineer",
+      "Data Scientist",
+      "Research Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-078",
+    "title": "Frontend Engineer",
+    "skills": [
+      "PostgreSQL",
+      "Microservices",
+      "Docker",
+      "REST APIs",
+      "JavaScript",
+      "Go"
+    ],
+    "years_experience": 12,
+    "education_level": "PhD",
+    "industry": "Tech",
+    "preferred_roles": [
+      "DevOps Engineer",
+      "Software Engineer",
+      "Full Stack Developer",
+      "Platform Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-079",
+    "title": "Growth Marketer",
+    "skills": [
+      "Social Media",
+      "Content Strategy",
+      "Copywriting",
+      "A/B Testing",
+      "Marketing Automation",
+      "Brand Strategy"
+    ],
+    "years_experience": 3,
+    "education_level": "Bootcamp",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Content Strategist",
+      "Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-080",
+    "title": "Financial Analyst",
+    "skills": [
+      "Financial Modeling",
+      "Valuation",
+      "Accounting",
+      "Power BI",
+      "Budgeting",
+      "Excel"
+    ],
+    "years_experience": 7,
+    "education_level": "Associate's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Risk Analyst",
+      "Finance Manager",
+      "Financial Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-081",
+    "title": "Machine Learning Engineer",
+    "skills": [
+      "Spark",
+      "Tableau",
+      "Statistics",
+      "MLOps"
+    ],
+    "years_experience": 7,
+    "education_level": "Bootcamp",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Machine Learning Engineer",
+      "Research Scientist",
+      "AI Engineer",
+      "Data Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-082",
+    "title": "Full Stack Developer",
+    "skills": [
+      "REST APIs",
+      "Python",
+      "Kubernetes",
+      "Node.js",
+      "AWS",
+      "TypeScript"
+    ],
+    "years_experience": 2,
+    "education_level": "Bootcamp",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Platform Engineer",
+      "Full Stack Developer",
+      "DevOps Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-083",
+    "title": "SEO Specialist",
+    "skills": [
+      "Paid Media",
+      "Email Marketing",
+      "Social Media",
+      "Copywriting",
+      "CRM",
+      "Marketing Automation"
+    ],
+    "years_experience": 3,
+    "education_level": "Master's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Digital Marketing Manager",
+      "Content Strategist",
+      "Brand Manager"
+    ]
+  },
+  {
+    "id": "synthetic-084",
+    "title": "Accountant",
+    "skills": [
+      "Financial Modeling",
+      "Risk Management",
+      "Valuation",
+      "Financial Reporting",
+      "Power BI",
+      "Accounting"
+    ],
+    "years_experience": 1,
+    "education_level": "Associate's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Investment Analyst",
+      "FP&A Manager",
+      "Financial Analyst",
+      "Finance Manager"
+    ]
+  },
+  {
+    "id": "synthetic-085",
+    "title": "Machine Learning Engineer",
+    "skills": [
+      "Spark",
+      "TensorFlow",
+      "NLP",
+      "Computer Vision",
+      "Deep Learning"
+    ],
+    "years_experience": 4,
+    "education_level": "Bachelor's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Scientist",
+      "Data Analyst",
+      "Machine Learning Engineer",
+      "Research Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-086",
+    "title": "DevOps Engineer",
+    "skills": [
+      "Microservices",
+      "TypeScript",
+      "JavaScript",
+      "Node.js",
+      "Go",
+      "Docker"
+    ],
+    "years_experience": 5,
+    "education_level": "Master's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Platform Engineer",
+      "Full Stack Developer"
+    ]
+  },
+  {
+    "id": "synthetic-087",
+    "title": "Brand Manager",
+    "skills": [
+      "Google Analytics",
+      "Email Marketing",
+      "Paid Media",
+      "A/B Testing",
+      "Brand Strategy",
+      "CRM"
+    ],
+    "years_experience": 3,
+    "education_level": "Bootcamp",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Growth Marketer",
+      "Digital Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-088",
+    "title": "Finance Manager",
+    "skills": [
+      "Power BI",
+      "Accounting",
+      "Excel",
+      "Risk Management",
+      "Financial Modeling",
+      "Forecasting",
+      "Valuation"
+    ],
+    "years_experience": 3,
+    "education_level": "Bootcamp",
+    "industry": "Finance",
+    "preferred_roles": [
+      "FP&A Manager",
+      "Investment Analyst",
+      "Risk Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-089",
+    "title": "Data Analyst",
+    "skills": [
+      "NLP",
+      "Scikit-learn",
+      "A/B Testing",
+      "Python"
+    ],
+    "years_experience": 10,
+    "education_level": "Associate's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Scientist",
+      "AI Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-090",
+    "title": "Site Reliability Engineer",
+    "skills": [
+      "REST APIs",
+      "Docker",
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "PostgreSQL"
+    ],
+    "years_experience": 9,
+    "education_level": "Bootcamp",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Software Engineer",
+      "Backend Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-091",
+    "title": "Brand Manager",
+    "skills": [
+      "Copywriting",
+      "Paid Media",
+      "Brand Strategy",
+      "CRM",
+      "Email Marketing"
+    ],
+    "years_experience": 4,
+    "education_level": "Bootcamp",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Marketing Manager",
+      "Brand Manager",
+      "Content Strategist",
+      "Growth Marketer"
+    ]
+  },
+  {
+    "id": "synthetic-092",
+    "title": "Accountant",
+    "skills": [
+      "Accounting",
+      "Budgeting",
+      "SQL",
+      "Power BI"
+    ],
+    "years_experience": 7,
+    "education_level": "PhD",
+    "industry": "Finance",
+    "preferred_roles": [
+      "FP&A Manager",
+      "Risk Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-093",
+    "title": "Data Scientist",
+    "skills": [
+      "TensorFlow",
+      "Scikit-learn",
+      "SQL",
+      "A/B Testing",
+      "Deep Learning",
+      "Tableau",
+      "Python"
+    ],
+    "years_experience": 1,
+    "education_level": "PhD",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Machine Learning Engineer",
+      "Research Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-094",
+    "title": "Software Engineer",
+    "skills": [
+      "PostgreSQL",
+      "React",
+      "CI/CD",
+      "Go",
+      "TypeScript"
+    ],
+    "years_experience": 0,
+    "education_level": "PhD",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Backend Engineer",
+      "Full Stack Developer"
+    ]
+  },
+  {
+    "id": "synthetic-095",
+    "title": "Growth Marketer",
+    "skills": [
+      "CRM",
+      "SEO",
+      "Google Analytics",
+      "A/B Testing"
+    ],
+    "years_experience": 11,
+    "education_level": "Master's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Content Strategist",
+      "Marketing Manager",
+      "Brand Manager",
+      "Growth Marketer"
+    ]
+  },
+  {
+    "id": "synthetic-096",
+    "title": "Financial Analyst",
+    "skills": [
+      "Risk Management",
+      "Power BI",
+      "Excel",
+      "GAAP",
+      "Budgeting"
+    ],
+    "years_experience": 14,
+    "education_level": "PhD",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Risk Analyst",
+      "Financial Analyst",
+      "Finance Manager",
+      "Investment Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-097",
+    "title": "Applied Scientist",
+    "skills": [
+      "Computer Vision",
+      "Deep Learning",
+      "NLP",
+      "Data Visualization"
+    ],
+    "years_experience": 9,
+    "education_level": "Bootcamp",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Scientist",
+      "Research Scientist",
+      "Machine Learning Engineer",
+      "Data Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-098",
+    "title": "Full Stack Developer",
+    "skills": [
+      "Kubernetes",
+      "Microservices",
+      "System Design",
+      "JavaScript"
+    ],
+    "years_experience": 2,
+    "education_level": "PhD",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Backend Engineer",
+      "Software Engineer",
+      "DevOps Engineer",
+      "Platform Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-099",
+    "title": "Brand Manager",
+    "skills": [
+      "Copywriting",
+      "A/B Testing",
+      "Marketing Automation",
+      "Email Marketing",
+      "Social Media",
+      "Paid Media"
+    ],
+    "years_experience": 13,
+    "education_level": "Bachelor's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Marketing Manager",
+      "Growth Marketer",
+      "Brand Manager",
+      "Content Strategist"
+    ]
+  },
+  {
+    "id": "synthetic-100",
+    "title": "Investment Analyst",
+    "skills": [
+      "Accounting",
+      "SQL",
+      "Risk Management",
+      "Power BI",
+      "Financial Reporting",
+      "Financial Modeling",
+      "Forecasting"
+    ],
+    "years_experience": 13,
+    "education_level": "PhD",
+    "industry": "Finance",
+    "preferred_roles": [
+      "FP&A Manager",
+      "Risk Analyst",
+      "Financial Analyst",
+      "Finance Manager"
+    ]
+  },
+  {
+    "id": "synthetic-101",
+    "title": "Data Scientist",
+    "skills": [
+      "Tableau",
+      "SQL",
+      "MLOps",
+      "Statistics"
+    ],
+    "years_experience": 3,
+    "education_level": "PhD",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Research Scientist",
+      "Data Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-102",
+    "title": "DevOps Engineer",
+    "skills": [
+      "REST APIs",
+      "JavaScript",
+      "Docker",
+      "Go",
+      "Microservices",
+      "Python"
+    ],
+    "years_experience": 9,
+    "education_level": "Associate's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Full Stack Developer",
+      "Software Engineer",
+      "Platform Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-103",
+    "title": "Brand Manager",
+    "skills": [
+      "Google Analytics",
+      "Paid Media",
+      "Social Media",
+      "Content Strategy",
+      "CRM"
+    ],
+    "years_experience": 11,
+    "education_level": "Bachelor's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Digital Marketing Manager",
+      "Growth Marketer",
+      "Brand Manager"
+    ]
+  },
+  {
+    "id": "synthetic-104",
+    "title": "Risk Analyst",
+    "skills": [
+      "GAAP",
+      "Valuation",
+      "Financial Modeling",
+      "Forecasting"
+    ],
+    "years_experience": 8,
+    "education_level": "PhD",
+    "industry": "Finance",
+    "preferred_roles": [
+      "FP&A Manager",
+      "Financial Analyst",
+      "Investment Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-105",
+    "title": "Machine Learning Engineer",
+    "skills": [
+      "SQL",
+      "Pandas",
+      "Computer Vision",
+      "NLP",
+      "Python",
+      "MLOps",
+      "Data Visualization"
+    ],
+    "years_experience": 6,
+    "education_level": "Bootcamp",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "AI Engineer",
+      "Data Analyst",
+      "Data Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-106",
+    "title": "Frontend Engineer",
+    "skills": [
+      "Microservices",
+      "Go",
+      "PostgreSQL",
+      "System Design",
+      "JavaScript",
+      "Python"
+    ],
+    "years_experience": 4,
+    "education_level": "Master's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Software Engineer",
+      "Platform Engineer",
+      "Backend Engineer",
+      "Full Stack Developer"
+    ]
+  },
+  {
+    "id": "synthetic-107",
+    "title": "Digital Marketing Specialist",
+    "skills": [
+      "Paid Media",
+      "A/B Testing",
+      "CRM",
+      "Copywriting",
+      "Google Analytics",
+      "Content Strategy",
+      "Email Marketing"
+    ],
+    "years_experience": 3,
+    "education_level": "PhD",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Marketing Manager",
+      "Content Strategist",
+      "Brand Manager"
+    ]
+  },
+  {
+    "id": "synthetic-108",
+    "title": "Finance Manager",
+    "skills": [
+      "Power BI",
+      "Valuation",
+      "Financial Modeling",
+      "Budgeting",
+      "SQL",
+      "GAAP",
+      "Financial Reporting"
+    ],
+    "years_experience": 0,
+    "education_level": "Master's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Finance Manager",
+      "Risk Analyst",
+      "Investment Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-109",
+    "title": "Data Analyst",
+    "skills": [
+      "SQL",
+      "Python",
+      "A/B Testing",
+      "Computer Vision",
+      "Statistics",
+      "Pandas"
+    ],
+    "years_experience": 4,
+    "education_level": "Bootcamp",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Machine Learning Engineer",
+      "Data Analyst",
+      "Data Scientist",
+      "Research Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-110",
+    "title": "Site Reliability Engineer",
+    "skills": [
+      "Docker",
+      "Python",
+      "Kubernetes",
+      "JavaScript"
+    ],
+    "years_experience": 10,
+    "education_level": "Associate's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Platform Engineer",
+      "DevOps Engineer",
+      "Full Stack Developer"
+    ]
+  },
+  {
+    "id": "synthetic-111",
+    "title": "Digital Marketing Specialist",
+    "skills": [
+      "Email Marketing",
+      "Content Strategy",
+      "Copywriting",
+      "SEO",
+      "Google Analytics",
+      "A/B Testing",
+      "CRM"
+    ],
+    "years_experience": 14,
+    "education_level": "PhD",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Brand Manager",
+      "Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-112",
+    "title": "Investment Analyst",
+    "skills": [
+      "GAAP",
+      "Risk Management",
+      "Power BI",
+      "Excel",
+      "Budgeting",
+      "Forecasting",
+      "Accounting"
+    ],
+    "years_experience": 7,
+    "education_level": "PhD",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Financial Analyst",
+      "Risk Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-113",
+    "title": "Applied Scientist",
+    "skills": [
+      "MLOps",
+      "Deep Learning",
+      "PyTorch",
+      "Tableau",
+      "NLP"
+    ],
+    "years_experience": 4,
+    "education_level": "Master's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Machine Learning Engineer",
+      "Data Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-114",
+    "title": "Backend Engineer",
+    "skills": [
+      "PostgreSQL",
+      "TypeScript",
+      "REST APIs",
+      "JavaScript",
+      "CI/CD"
+    ],
+    "years_experience": 15,
+    "education_level": "Bootcamp",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Platform Engineer",
+      "DevOps Engineer",
+      "Full Stack Developer",
+      "Backend Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-115",
+    "title": "Digital Marketing Specialist",
+    "skills": [
+      "Google Analytics",
+      "Paid Media",
+      "Content Strategy",
+      "A/B Testing",
+      "Social Media",
+      "Brand Strategy"
+    ],
+    "years_experience": 9,
+    "education_level": "PhD",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Marketing Manager",
+      "Content Strategist",
+      "Brand Manager",
+      "Digital Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-116",
+    "title": "Accountant",
+    "skills": [
+      "SQL",
+      "Financial Modeling",
+      "GAAP",
+      "Accounting",
+      "Risk Management",
+      "Forecasting",
+      "Power BI"
+    ],
+    "years_experience": 2,
+    "education_level": "Associate's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Risk Analyst",
+      "Investment Analyst",
+      "Finance Manager",
+      "Financial Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-117",
+    "title": "ML Researcher",
+    "skills": [
+      "PyTorch",
+      "Spark",
+      "A/B Testing",
+      "Data Visualization",
+      "Pandas"
+    ],
+    "years_experience": 1,
+    "education_level": "Bootcamp",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Analyst",
+      "Data Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-118",
+    "title": "DevOps Engineer",
+    "skills": [
+      "Python",
+      "React",
+      "Microservices",
+      "Kubernetes",
+      "REST APIs"
+    ],
+    "years_experience": 5,
+    "education_level": "PhD",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Full Stack Developer",
+      "DevOps Engineer",
+      "Backend Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-119",
+    "title": "Content Strategist",
+    "skills": [
+      "CRM",
+      "Brand Strategy",
+      "Content Strategy",
+      "A/B Testing"
+    ],
+    "years_experience": 3,
+    "education_level": "Associate's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Brand Manager",
+      "Content Strategist",
+      "Growth Marketer",
+      "Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-120",
+    "title": "Accountant",
+    "skills": [
+      "GAAP",
+      "Forecasting",
+      "Accounting",
+      "Valuation"
+    ],
+    "years_experience": 12,
+    "education_level": "Master's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Financial Analyst",
+      "FP&A Manager",
+      "Investment Analyst",
+      "Finance Manager"
+    ]
+  },
+  {
+    "id": "synthetic-121",
+    "title": "Data Analyst",
+    "skills": [
+      "NLP",
+      "Computer Vision",
+      "Tableau",
+      "MLOps",
+      "Data Visualization"
+    ],
+    "years_experience": 2,
+    "education_level": "Bootcamp",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Analyst",
+      "Data Scientist",
+      "Machine Learning Engineer",
+      "Research Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-122",
+    "title": "Backend Engineer",
+    "skills": [
+      "Go",
+      "CI/CD",
+      "Kubernetes",
+      "React",
+      "REST APIs"
+    ],
+    "years_experience": 4,
+    "education_level": "Master's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Full Stack Developer",
+      "Software Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-123",
+    "title": "Brand Manager",
+    "skills": [
+      "CRM",
+      "Brand Strategy",
+      "Google Analytics",
+      "Copywriting"
+    ],
+    "years_experience": 4,
+    "education_level": "Master's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Digital Marketing Manager",
+      "Growth Marketer"
+    ]
+  },
+  {
+    "id": "synthetic-124",
+    "title": "Finance Manager",
+    "skills": [
+      "Financial Modeling",
+      "Risk Management",
+      "Accounting",
+      "Budgeting",
+      "SQL",
+      "Valuation",
+      "Forecasting"
+    ],
+    "years_experience": 14,
+    "education_level": "Master's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Finance Manager",
+      "FP&A Manager",
+      "Risk Analyst",
+      "Financial Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-125",
+    "title": "Data Analyst",
+    "skills": [
+      "A/B Testing",
+      "Deep Learning",
+      "TensorFlow",
+      "Statistics",
+      "Data Visualization",
+      "NLP",
+      "Computer Vision"
+    ],
+    "years_experience": 5,
+    "education_level": "Master's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Machine Learning Engineer",
+      "Data Analyst",
+      "Data Scientist",
+      "Research Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-126",
+    "title": "Frontend Engineer",
+    "skills": [
+      "Microservices",
+      "AWS",
+      "JavaScript",
+      "Node.js"
+    ],
+    "years_experience": 2,
+    "education_level": "Master's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "DevOps Engineer",
+      "Backend Engineer",
+      "Platform Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-127",
+    "title": "Marketing Manager",
+    "skills": [
+      "Paid Media",
+      "Brand Strategy",
+      "SEO",
+      "Copywriting",
+      "Marketing Automation"
+    ],
+    "years_experience": 12,
+    "education_level": "Associate's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Growth Marketer",
+      "Brand Manager",
+      "Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-128",
+    "title": "Accountant",
+    "skills": [
+      "Financial Modeling",
+      "Accounting",
+      "Excel",
+      "GAAP",
+      "Risk Management"
+    ],
+    "years_experience": 4,
+    "education_level": "Master's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "FP&A Manager",
+      "Investment Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-129",
+    "title": "Machine Learning Engineer",
+    "skills": [
+      "A/B Testing",
+      "Spark",
+      "Python",
+      "SQL",
+      "Deep Learning",
+      "TensorFlow",
+      "Scikit-learn"
+    ],
+    "years_experience": 4,
+    "education_level": "Associate's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Research Scientist",
+      "AI Engineer",
+      "Data Scientist",
+      "Machine Learning Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-130",
+    "title": "Backend Engineer",
+    "skills": [
+      "JavaScript",
+      "Python",
+      "React",
+      "Docker",
+      "PostgreSQL",
+      "Kubernetes"
+    ],
+    "years_experience": 2,
+    "education_level": "Bachelor's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Platform Engineer",
+      "Software Engineer",
+      "Full Stack Developer"
+    ]
+  },
+  {
+    "id": "synthetic-131",
+    "title": "Brand Manager",
+    "skills": [
+      "Google Analytics",
+      "Email Marketing",
+      "Copywriting",
+      "SEO",
+      "A/B Testing"
+    ],
+    "years_experience": 11,
+    "education_level": "Master's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Brand Manager",
+      "Growth Marketer",
+      "Content Strategist",
+      "Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-132",
+    "title": "Risk Analyst",
+    "skills": [
+      "Excel",
+      "Power BI",
+      "GAAP",
+      "Financial Modeling",
+      "Budgeting",
+      "Risk Management"
+    ],
+    "years_experience": 1,
+    "education_level": "Bootcamp",
+    "industry": "Finance",
+    "preferred_roles": [
+      "FP&A Manager",
+      "Financial Analyst",
+      "Finance Manager"
+    ]
+  },
+  {
+    "id": "synthetic-133",
+    "title": "Data Scientist",
+    "skills": [
+      "Scikit-learn",
+      "Computer Vision",
+      "NLP",
+      "Deep Learning",
+      "SQL",
+      "Spark"
+    ],
+    "years_experience": 10,
+    "education_level": "Master's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Analyst",
+      "Research Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-134",
+    "title": "Site Reliability Engineer",
+    "skills": [
+      "System Design",
+      "CI/CD",
+      "REST APIs",
+      "Kubernetes",
+      "Microservices"
+    ],
+    "years_experience": 5,
+    "education_level": "Master's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "DevOps Engineer",
+      "Software Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-135",
+    "title": "Content Strategist",
+    "skills": [
+      "SEO",
+      "Social Media",
+      "CRM",
+      "Brand Strategy",
+      "Google Analytics"
+    ],
+    "years_experience": 12,
+    "education_level": "Associate's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Content Strategist",
+      "Marketing Manager",
+      "Digital Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-136",
+    "title": "Investment Analyst",
+    "skills": [
+      "Accounting",
+      "Financial Modeling",
+      "Financial Reporting",
+      "Valuation",
+      "GAAP",
+      "Forecasting"
+    ],
+    "years_experience": 13,
+    "education_level": "Bootcamp",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Investment Analyst",
+      "Risk Analyst",
+      "Finance Manager",
+      "Financial Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-137",
+    "title": "ML Researcher",
+    "skills": [
+      "PyTorch",
+      "Deep Learning",
+      "Data Visualization",
+      "TensorFlow",
+      "SQL",
+      "Statistics",
+      "NLP"
+    ],
+    "years_experience": 13,
+    "education_level": "Associate's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Research Scientist",
+      "Data Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-138",
+    "title": "Frontend Engineer",
+    "skills": [
+      "JavaScript",
+      "Go",
+      "REST APIs",
+      "Node.js"
+    ],
+    "years_experience": 9,
+    "education_level": "Bootcamp",
+    "industry": "Tech",
+    "preferred_roles": [
+      "DevOps Engineer",
+      "Backend Engineer",
+      "Full Stack Developer",
+      "Platform Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-139",
+    "title": "Content Strategist",
+    "skills": [
+      "SEO",
+      "Brand Strategy",
+      "Copywriting",
+      "Email Marketing",
+      "A/B Testing",
+      "CRM",
+      "Marketing Automation"
+    ],
+    "years_experience": 12,
+    "education_level": "PhD",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Growth Marketer",
+      "Marketing Manager",
+      "Brand Manager",
+      "Digital Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-140",
+    "title": "Financial Analyst",
+    "skills": [
+      "Excel",
+      "Budgeting",
+      "Accounting",
+      "Power BI",
+      "GAAP"
+    ],
+    "years_experience": 1,
+    "education_level": "Associate's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Investment Analyst",
+      "FP&A Manager"
+    ]
+  },
+  {
+    "id": "synthetic-141",
+    "title": "Data Analyst",
+    "skills": [
+      "Deep Learning",
+      "SQL",
+      "Spark",
+      "Pandas",
+      "Data Visualization",
+      "PyTorch",
+      "Statistics"
+    ],
+    "years_experience": 10,
+    "education_level": "PhD",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Scientist",
+      "Research Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-142",
+    "title": "Site Reliability Engineer",
+    "skills": [
+      "Kubernetes",
+      "AWS",
+      "Docker",
+      "CI/CD",
+      "JavaScript"
+    ],
+    "years_experience": 8,
+    "education_level": "PhD",
+    "industry": "Tech",
+    "preferred_roles": [
+      "DevOps Engineer",
+      "Backend Engineer",
+      "Full Stack Developer",
+      "Platform Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-143",
+    "title": "Digital Marketing Specialist",
+    "skills": [
+      "Social Media",
+      "Content Strategy",
+      "Google Analytics",
+      "A/B Testing",
+      "CRM",
+      "Paid Media",
+      "Copywriting"
+    ],
+    "years_experience": 2,
+    "education_level": "PhD",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Content Strategist",
+      "Marketing Manager",
+      "Digital Marketing Manager",
+      "Growth Marketer"
+    ]
+  },
+  {
+    "id": "synthetic-144",
+    "title": "Accountant",
+    "skills": [
+      "Financial Reporting",
+      "Forecasting",
+      "Accounting",
+      "Budgeting",
+      "Financial Modeling"
+    ],
+    "years_experience": 6,
+    "education_level": "Master's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Investment Analyst",
+      "Financial Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-145",
+    "title": "Data Analyst",
+    "skills": [
+      "A/B Testing",
+      "Deep Learning",
+      "Data Visualization",
+      "Pandas",
+      "Spark",
+      "SQL"
+    ],
+    "years_experience": 2,
+    "education_level": "PhD",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "AI Engineer",
+      "Research Scientist",
+      "Machine Learning Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-146",
+    "title": "DevOps Engineer",
+    "skills": [
+      "TypeScript",
+      "Go",
+      "REST APIs",
+      "JavaScript"
+    ],
+    "years_experience": 14,
+    "education_level": "Bootcamp",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Platform Engineer",
+      "Full Stack Developer",
+      "Software Engineer",
+      "DevOps Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-147",
+    "title": "Growth Marketer",
+    "skills": [
+      "Marketing Automation",
+      "SEO",
+      "Content Strategy",
+      "Google Analytics",
+      "Paid Media",
+      "CRM",
+      "Brand Strategy"
+    ],
+    "years_experience": 10,
+    "education_level": "Master's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Digital Marketing Manager",
+      "Content Strategist",
+      "Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-148",
+    "title": "Accountant",
+    "skills": [
+      "Financial Reporting",
+      "Power BI",
+      "Valuation",
+      "Forecasting",
+      "Accounting"
+    ],
+    "years_experience": 9,
+    "education_level": "Associate's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Financial Analyst",
+      "Finance Manager",
+      "FP&A Manager",
+      "Risk Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-149",
+    "title": "Machine Learning Engineer",
+    "skills": [
+      "Tableau",
+      "Spark",
+      "Python",
+      "Deep Learning",
+      "SQL",
+      "Computer Vision"
+    ],
+    "years_experience": 8,
+    "education_level": "Master's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "AI Engineer",
+      "Data Scientist",
+      "Machine Learning Engineer",
+      "Data Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-150",
+    "title": "Site Reliability Engineer",
+    "skills": [
+      "Kubernetes",
+      "React",
+      "REST APIs",
+      "Docker",
+      "Node.js",
+      "System Design"
+    ],
+    "years_experience": 2,
+    "education_level": "Bachelor's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "DevOps Engineer",
+      "Platform Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-151",
+    "title": "SEO Specialist",
+    "skills": [
+      "Social Media",
+      "Brand Strategy",
+      "Google Analytics",
+      "A/B Testing",
+      "Copywriting",
+      "Paid Media",
+      "Marketing Automation"
+    ],
+    "years_experience": 11,
+    "education_level": "Bootcamp",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Content Strategist",
+      "Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-152",
+    "title": "Accountant",
+    "skills": [
+      "SQL",
+      "Excel",
+      "Valuation",
+      "Financial Reporting",
+      "GAAP"
+    ],
+    "years_experience": 4,
+    "education_level": "Bachelor's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "FP&A Manager",
+      "Investment Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-153",
+    "title": "Applied Scientist",
+    "skills": [
+      "Scikit-learn",
+      "Tableau",
+      "Pandas",
+      "PyTorch",
+      "Spark",
+      "Computer Vision",
+      "MLOps"
+    ],
+    "years_experience": 5,
+    "education_level": "Bootcamp",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "AI Engineer",
+      "Research Scientist",
+      "Machine Learning Engineer",
+      "Data Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-154",
+    "title": "Software Engineer",
+    "skills": [
+      "Docker",
+      "AWS",
+      "Kubernetes",
+      "React"
+    ],
+    "years_experience": 6,
+    "education_level": "Associate's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Software Engineer",
+      "Platform Engineer",
+      "Backend Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-155",
+    "title": "SEO Specialist",
+    "skills": [
+      "Email Marketing",
+      "Marketing Automation",
+      "SEO",
+      "Content Strategy",
+      "Social Media",
+      "Paid Media",
+      "Google Analytics"
+    ],
+    "years_experience": 11,
+    "education_level": "Bootcamp",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Marketing Manager",
+      "Brand Manager",
+      "Digital Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-156",
+    "title": "Risk Analyst",
+    "skills": [
+      "Accounting",
+      "Power BI",
+      "Valuation",
+      "Excel",
+      "Budgeting"
+    ],
+    "years_experience": 14,
+    "education_level": "Associate's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Risk Analyst",
+      "Financial Analyst",
+      "Investment Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-157",
+    "title": "Data Scientist",
+    "skills": [
+      "PyTorch",
+      "Deep Learning",
+      "MLOps",
+      "Data Visualization",
+      "Tableau",
+      "Pandas",
+      "Scikit-learn"
+    ],
+    "years_experience": 12,
+    "education_level": "Associate's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Scientist",
+      "Research Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-158",
+    "title": "Backend Engineer",
+    "skills": [
+      "CI/CD",
+      "Kubernetes",
+      "AWS",
+      "System Design",
+      "TypeScript",
+      "Microservices"
+    ],
+    "years_experience": 4,
+    "education_level": "PhD",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Full Stack Developer",
+      "Backend Engineer",
+      "DevOps Engineer",
+      "Platform Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-159",
+    "title": "Brand Manager",
+    "skills": [
+      "Marketing Automation",
+      "CRM",
+      "A/B Testing",
+      "Paid Media",
+      "Brand Strategy",
+      "Email Marketing"
+    ],
+    "years_experience": 9,
+    "education_level": "Bootcamp",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Content Strategist",
+      "Digital Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-160",
+    "title": "Finance Manager",
+    "skills": [
+      "Risk Management",
+      "GAAP",
+      "Valuation",
+      "Financial Modeling"
+    ],
+    "years_experience": 15,
+    "education_level": "PhD",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Risk Analyst",
+      "Finance Manager",
+      "FP&A Manager",
+      "Financial Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-161",
+    "title": "Applied Scientist",
+    "skills": [
+      "Pandas",
+      "Data Visualization",
+      "NLP",
+      "Computer Vision",
+      "Spark",
+      "Statistics",
+      "MLOps"
+    ],
+    "years_experience": 7,
+    "education_level": "Bachelor's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Scientist",
+      "Machine Learning Engineer",
+      "Research Scientist",
+      "AI Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-162",
+    "title": "Frontend Engineer",
+    "skills": [
+      "TypeScript",
+      "Docker",
+      "Microservices",
+      "React",
+      "CI/CD",
+      "AWS",
+      "Kubernetes"
+    ],
+    "years_experience": 1,
+    "education_level": "Master's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Backend Engineer",
+      "Full Stack Developer",
+      "DevOps Engineer",
+      "Platform Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-163",
+    "title": "Brand Manager",
+    "skills": [
+      "Brand Strategy",
+      "Google Analytics",
+      "Paid Media",
+      "CRM",
+      "Email Marketing",
+      "A/B Testing",
+      "Marketing Automation"
+    ],
+    "years_experience": 15,
+    "education_level": "Master's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Content Strategist",
+      "Digital Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-164",
+    "title": "Investment Analyst",
+    "skills": [
+      "Valuation",
+      "Budgeting",
+      "SQL",
+      "Accounting",
+      "GAAP",
+      "Forecasting"
+    ],
+    "years_experience": 8,
+    "education_level": "PhD",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Risk Analyst",
+      "Investment Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-165",
+    "title": "ML Researcher",
+    "skills": [
+      "Deep Learning",
+      "MLOps",
+      "Pandas",
+      "TensorFlow",
+      "Python",
+      "Computer Vision"
+    ],
+    "years_experience": 2,
+    "education_level": "PhD",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Analyst",
+      "AI Engineer",
+      "Data Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-166",
+    "title": "Backend Engineer",
+    "skills": [
+      "AWS",
+      "Microservices",
+      "Node.js",
+      "TypeScript",
+      "JavaScript",
+      "React"
+    ],
+    "years_experience": 7,
+    "education_level": "Bachelor's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Platform Engineer",
+      "Backend Engineer",
+      "Full Stack Developer",
+      "Software Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-167",
+    "title": "Marketing Manager",
+    "skills": [
+      "Copywriting",
+      "Brand Strategy",
+      "Paid Media",
+      "Content Strategy"
+    ],
+    "years_experience": 4,
+    "education_level": "Bachelor's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Growth Marketer",
+      "Brand Manager",
+      "Content Strategist",
+      "Digital Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-168",
+    "title": "FP&A Manager",
+    "skills": [
+      "Valuation",
+      "Accounting",
+      "Financial Reporting",
+      "Financial Modeling",
+      "Risk Management"
+    ],
+    "years_experience": 2,
+    "education_level": "Associate's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Risk Analyst",
+      "Financial Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-169",
+    "title": "Machine Learning Engineer",
+    "skills": [
+      "MLOps",
+      "Tableau",
+      "Pandas",
+      "Python",
+      "Statistics",
+      "A/B Testing",
+      "Deep Learning"
+    ],
+    "years_experience": 9,
+    "education_level": "Bachelor's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Analyst",
+      "Data Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-170",
+    "title": "Frontend Engineer",
+    "skills": [
+      "Kubernetes",
+      "REST APIs",
+      "AWS",
+      "Microservices",
+      "System Design",
+      "TypeScript"
+    ],
+    "years_experience": 14,
+    "education_level": "PhD",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Software Engineer",
+      "Full Stack Developer"
+    ]
+  },
+  {
+    "id": "synthetic-171",
+    "title": "Growth Marketer",
+    "skills": [
+      "CRM",
+      "Email Marketing",
+      "Google Analytics",
+      "SEO",
+      "Brand Strategy",
+      "Marketing Automation",
+      "Copywriting"
+    ],
+    "years_experience": 6,
+    "education_level": "Master's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Brand Manager",
+      "Digital Marketing Manager",
+      "Content Strategist",
+      "Growth Marketer"
+    ]
+  },
+  {
+    "id": "synthetic-172",
+    "title": "Financial Analyst",
+    "skills": [
+      "Financial Reporting",
+      "Excel",
+      "Forecasting",
+      "Power BI",
+      "Budgeting",
+      "SQL",
+      "GAAP"
+    ],
+    "years_experience": 0,
+    "education_level": "PhD",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Finance Manager",
+      "Investment Analyst",
+      "Risk Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-173",
+    "title": "Data Analyst",
+    "skills": [
+      "Spark",
+      "Computer Vision",
+      "MLOps",
+      "Python",
+      "TensorFlow",
+      "PyTorch"
+    ],
+    "years_experience": 7,
+    "education_level": "Bachelor's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Scientist",
+      "AI Engineer",
+      "Machine Learning Engineer",
+      "Research Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-174",
+    "title": "Full Stack Developer",
+    "skills": [
+      "Microservices",
+      "JavaScript",
+      "REST APIs",
+      "Node.js",
+      "Go",
+      "React"
+    ],
+    "years_experience": 7,
+    "education_level": "Master's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Backend Engineer",
+      "DevOps Engineer",
+      "Full Stack Developer"
+    ]
+  },
+  {
+    "id": "synthetic-175",
+    "title": "Brand Manager",
+    "skills": [
+      "Copywriting",
+      "Marketing Automation",
+      "Paid Media",
+      "Social Media",
+      "CRM",
+      "Content Strategy"
+    ],
+    "years_experience": 2,
+    "education_level": "Associate's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Digital Marketing Manager",
+      "Content Strategist",
+      "Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-176",
+    "title": "Risk Analyst",
+    "skills": [
+      "Financial Modeling",
+      "Power BI",
+      "GAAP",
+      "Budgeting"
+    ],
+    "years_experience": 4,
+    "education_level": "Master's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Risk Analyst",
+      "Investment Analyst",
+      "Financial Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-177",
+    "title": "Machine Learning Engineer",
+    "skills": [
+      "SQL",
+      "Data Visualization",
+      "A/B Testing",
+      "Python",
+      "Deep Learning",
+      "Pandas",
+      "Tableau"
+    ],
+    "years_experience": 13,
+    "education_level": "Bootcamp",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Scientist",
+      "AI Engineer",
+      "Data Analyst",
+      "Machine Learning Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-178",
+    "title": "Site Reliability Engineer",
+    "skills": [
+      "Docker",
+      "Node.js",
+      "Python",
+      "React"
+    ],
+    "years_experience": 2,
+    "education_level": "Bachelor's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Full Stack Developer",
+      "Software Engineer",
+      "Platform Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-179",
+    "title": "Marketing Manager",
+    "skills": [
+      "Paid Media",
+      "SEO",
+      "Email Marketing",
+      "Copywriting"
+    ],
+    "years_experience": 5,
+    "education_level": "Master's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Brand Manager",
+      "Content Strategist",
+      "Growth Marketer",
+      "Digital Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-180",
+    "title": "FP&A Manager",
+    "skills": [
+      "Excel",
+      "Power BI",
+      "Forecasting",
+      "Accounting",
+      "Financial Modeling",
+      "Financial Reporting",
+      "Valuation"
+    ],
+    "years_experience": 12,
+    "education_level": "Associate's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Finance Manager",
+      "Financial Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-181",
+    "title": "Data Scientist",
+    "skills": [
+      "A/B Testing",
+      "NLP",
+      "Computer Vision",
+      "Data Visualization",
+      "Statistics",
+      "Deep Learning"
+    ],
+    "years_experience": 12,
+    "education_level": "Master's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "AI Engineer",
+      "Data Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-182",
+    "title": "Backend Engineer",
+    "skills": [
+      "React",
+      "Microservices",
+      "JavaScript",
+      "Python",
+      "Docker",
+      "REST APIs"
+    ],
+    "years_experience": 7,
+    "education_level": "Master's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Software Engineer",
+      "Platform Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-183",
+    "title": "SEO Specialist",
+    "skills": [
+      "Social Media",
+      "SEO",
+      "Copywriting",
+      "Paid Media"
+    ],
+    "years_experience": 7,
+    "education_level": "Associate's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Marketing Manager",
+      "Growth Marketer"
+    ]
+  },
+  {
+    "id": "synthetic-184",
+    "title": "Risk Analyst",
+    "skills": [
+      "Budgeting",
+      "GAAP",
+      "Accounting",
+      "Power BI",
+      "Excel",
+      "Forecasting"
+    ],
+    "years_experience": 4,
+    "education_level": "Associate's",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Investment Analyst",
+      "FP&A Manager"
+    ]
+  },
+  {
+    "id": "synthetic-185",
+    "title": "Data Analyst",
+    "skills": [
+      "Data Visualization",
+      "Spark",
+      "Computer Vision",
+      "Pandas"
+    ],
+    "years_experience": 13,
+    "education_level": "Associate's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Scientist",
+      "Data Analyst",
+      "AI Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-186",
+    "title": "Site Reliability Engineer",
+    "skills": [
+      "CI/CD",
+      "AWS",
+      "Go",
+      "Docker",
+      "REST APIs",
+      "TypeScript",
+      "Node.js"
+    ],
+    "years_experience": 12,
+    "education_level": "Master's",
+    "industry": "Tech",
+    "preferred_roles": [
+      "DevOps Engineer",
+      "Backend Engineer",
+      "Software Engineer",
+      "Platform Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-187",
+    "title": "Digital Marketing Specialist",
+    "skills": [
+      "Paid Media",
+      "SEO",
+      "Marketing Automation",
+      "Copywriting",
+      "Social Media"
+    ],
+    "years_experience": 4,
+    "education_level": "Bootcamp",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Content Strategist",
+      "Growth Marketer"
+    ]
+  },
+  {
+    "id": "synthetic-188",
+    "title": "Accountant",
+    "skills": [
+      "SQL",
+      "Accounting",
+      "Excel",
+      "Budgeting"
+    ],
+    "years_experience": 1,
+    "education_level": "PhD",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Risk Analyst",
+      "Financial Analyst",
+      "Investment Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-189",
+    "title": "Machine Learning Engineer",
+    "skills": [
+      "A/B Testing",
+      "Scikit-learn",
+      "PyTorch",
+      "TensorFlow",
+      "Python"
+    ],
+    "years_experience": 6,
+    "education_level": "Master's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Scientist",
+      "AI Engineer",
+      "Research Scientist",
+      "Data Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-190",
+    "title": "Full Stack Developer",
+    "skills": [
+      "AWS",
+      "Go",
+      "Node.js",
+      "Docker",
+      "Kubernetes"
+    ],
+    "years_experience": 11,
+    "education_level": "PhD",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Full Stack Developer",
+      "DevOps Engineer",
+      "Backend Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-191",
+    "title": "Marketing Manager",
+    "skills": [
+      "Brand Strategy",
+      "Social Media",
+      "CRM",
+      "Marketing Automation",
+      "A/B Testing",
+      "SEO",
+      "Email Marketing"
+    ],
+    "years_experience": 7,
+    "education_level": "Master's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Content Strategist",
+      "Brand Manager"
+    ]
+  },
+  {
+    "id": "synthetic-192",
+    "title": "Accountant",
+    "skills": [
+      "Budgeting",
+      "Accounting",
+      "Financial Reporting",
+      "Risk Management",
+      "Valuation"
+    ],
+    "years_experience": 7,
+    "education_level": "Bootcamp",
+    "industry": "Finance",
+    "preferred_roles": [
+      "FP&A Manager",
+      "Risk Analyst",
+      "Finance Manager",
+      "Investment Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-193",
+    "title": "ML Researcher",
+    "skills": [
+      "Computer Vision",
+      "Deep Learning",
+      "PyTorch",
+      "Pandas",
+      "MLOps"
+    ],
+    "years_experience": 15,
+    "education_level": "Master's",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "Data Scientist",
+      "Research Scientist",
+      "AI Engineer",
+      "Data Analyst"
+    ]
+  },
+  {
+    "id": "synthetic-194",
+    "title": "Software Engineer",
+    "skills": [
+      "TypeScript",
+      "REST APIs",
+      "React",
+      "JavaScript",
+      "System Design",
+      "Python",
+      "Microservices"
+    ],
+    "years_experience": 14,
+    "education_level": "PhD",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Platform Engineer",
+      "DevOps Engineer"
+    ]
+  },
+  {
+    "id": "synthetic-195",
+    "title": "Digital Marketing Specialist",
+    "skills": [
+      "SEO",
+      "CRM",
+      "Marketing Automation",
+      "Copywriting",
+      "A/B Testing",
+      "Paid Media",
+      "Email Marketing"
+    ],
+    "years_experience": 8,
+    "education_level": "Associate's",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Marketing Manager",
+      "Brand Manager",
+      "Digital Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-196",
+    "title": "Financial Analyst",
+    "skills": [
+      "Power BI",
+      "Forecasting",
+      "Budgeting",
+      "Financial Reporting"
+    ],
+    "years_experience": 8,
+    "education_level": "PhD",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Investment Analyst",
+      "Financial Analyst",
+      "Finance Manager"
+    ]
+  },
+  {
+    "id": "synthetic-197",
+    "title": "ML Researcher",
+    "skills": [
+      "Spark",
+      "Scikit-learn",
+      "Computer Vision",
+      "Tableau",
+      "TensorFlow",
+      "SQL",
+      "Python"
+    ],
+    "years_experience": 2,
+    "education_level": "Bootcamp",
+    "industry": "Data Science",
+    "preferred_roles": [
+      "AI Engineer",
+      "Research Scientist",
+      "Data Scientist"
+    ]
+  },
+  {
+    "id": "synthetic-198",
+    "title": "Site Reliability Engineer",
+    "skills": [
+      "Microservices",
+      "TypeScript",
+      "JavaScript",
+      "Kubernetes"
+    ],
+    "years_experience": 13,
+    "education_level": "PhD",
+    "industry": "Tech",
+    "preferred_roles": [
+      "Software Engineer",
+      "Platform Engineer",
+      "DevOps Engineer",
+      "Full Stack Developer"
+    ]
+  },
+  {
+    "id": "synthetic-199",
+    "title": "Digital Marketing Specialist",
+    "skills": [
+      "Email Marketing",
+      "SEO",
+      "Content Strategy",
+      "CRM",
+      "Paid Media",
+      "Copywriting",
+      "A/B Testing"
+    ],
+    "years_experience": 5,
+    "education_level": "PhD",
+    "industry": "Marketing",
+    "preferred_roles": [
+      "Growth Marketer",
+      "Digital Marketing Manager"
+    ]
+  },
+  {
+    "id": "synthetic-200",
+    "title": "Finance Manager",
+    "skills": [
+      "Excel",
+      "Valuation",
+      "Forecasting",
+      "Budgeting",
+      "GAAP",
+      "SQL",
+      "Risk Management"
+    ],
+    "years_experience": 10,
+    "education_level": "Bootcamp",
+    "industry": "Finance",
+    "preferred_roles": [
+      "Finance Manager",
+      "Financial Analyst",
+      "FP&A Manager",
+      "Risk Analyst"
+    ]
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "classic",
+    "name": "Classic Professional",
+    "latex_font": "\\usepackage{lmodern}",
+    "css_family": "Georgia, serif",
+    "preview_style": "font-serif"
+  },
+  {
+    "id": "modern",
+    "name": "Modern Sans",
+    "latex_font": "\\usepackage{helvet}\\renewcommand{\\familydefault}{\\sfdefault}",
+    "css_family": "Inter, sans-serif",
+    "preview_style": "font-sans"
+  },
+  {
+    "id": "times",
+    "name": "Times New Roman",
+    "latex_font": "\\usepackage{mathptmx}",
+    "css_family": "'Times New Roman', Times, serif",
+    "preview_style": "font-serif"
+  },
+  {
+    "id": "garamond",
+    "name": "Garamond",
+    "latex_font": "\\usepackage{ebgaramond}",
+    "css_family": "'EB Garamond', Garamond, serif",
+    "preview_style": "font-serif"
+  },
+  {
+    "id": "source_sans",
+    "name": "Source Sans Pro",
+    "latex_font": "\\usepackage[default]{sourcesanspro}",
+    "css_family": "'Source Sans Pro', sans-serif",
+    "preview_style": "font-sans"
+  },
+  {
+    "id": "roboto",
+    "name": "Roboto",
+    "latex_font": "\\usepackage[sfdefault]{roboto}",
+    "css_family": "Roboto, sans-serif",
+    "preview_style": "font-sans"
+  },
+  {
+    "id": "palatino",
+    "name": "Palatino",
+    "latex_font": "\\usepackage{mathpazo}",
+    "css_family": "Palatino, 'Palatino Linotype', serif",
+    "preview_style": "font-serif"
+  },
+  {
+    "id": "book_antiqua",
+    "name": "Book Antiqua",
+    "latex_font": "\\usepackage{bookman}",
+    "css_family": "'Book Antiqua', Palatino, serif",
+    "preview_style": "font-serif"
+  },
+  {
+    "id": "calibri",
+    "name": "Calibri",
+    "latex_font": "\\usepackage{carlito}\\renewcommand{\\familydefault}{\\sfdefault}",
+    "css_family": "Calibri, 'Carlito', sans-serif",
+    "preview_style": "font-sans"
+  },
+  {
+    "id": "open_sans",
+    "name": "Open Sans",
+    "latex_font": "\\usepackage[default]{opensans}",
+    "css_family": "'Open Sans', sans-serif",
+    "preview_style": "font-sans"
+  },
+  {
+    "id": "montserrat",
+    "name": "Montserrat",
+    "latex_font": "\\usepackage[defaultfam]{montserrat}\\renewcommand{\\familydefault}{\\sfdefault}",
+    "css_family": "Montserrat, sans-serif",
+    "preview_style": "font-sans"
+  },
+  {
+    "id": "nunito",
+    "name": "Nunito",
+    "latex_font": "\\usepackage{fetamont}\\renewcommand{\\familydefault}{\\sfdefault}",
+    "css_family": "Nunito, sans-serif",
+    "preview_style": "font-sans"
+  }
+]
