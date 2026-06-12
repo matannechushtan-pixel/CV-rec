@@ -23,16 +23,27 @@ Guidelines:
 """
 
 
-def _build_system(cv_context: dict | None) -> str:
+FOLLOW_UP_INSTRUCTION = """
+At the end of your reply, ask exactly ONE focused follow-up question to keep the
+conversation moving toward a concrete next step for the user's job search or career.
+"""
+
+
+def _build_system(cv_context: dict | None, applications_context: str | None = None) -> str:
     system = SYSTEM_PROMPT
     if cv_context:
         system += f"\n\nUser's current CV data:\n{json.dumps(cv_context, indent=2, ensure_ascii=False)}"
+    if applications_context:
+        system += f"\n\nUser's job application activity:\n{applications_context}"
+    system += FOLLOW_UP_INSTRUCTION
     return system
 
 
-async def chat(messages: list[dict], cv_context: dict | None = None) -> str:
+async def chat(
+    messages: list[dict], cv_context: dict | None = None, applications_context: str | None = None
+) -> str:
     """Non-streaming career coach reply (Claude — empathy + nuanced reasoning)."""
-    system = _build_system(cv_context)
+    system = _build_system(cv_context, applications_context)
     if len(messages) == 1:
         return await claude_generate(messages[0]["content"], system=system, max_tokens=1024)
 
@@ -45,9 +56,11 @@ async def chat(messages: list[dict], cv_context: dict | None = None) -> str:
     return response.content[0].text
 
 
-async def chat_stream(messages: list[dict], cv_context: dict | None = None) -> AsyncIterator[str]:
+async def chat_stream(
+    messages: list[dict], cv_context: dict | None = None, applications_context: str | None = None
+) -> AsyncIterator[str]:
     """Streaming career coach reply (Claude — empathy + nuanced reasoning)."""
-    system = _build_system(cv_context)
+    system = _build_system(cv_context, applications_context)
     async with anthropic_client.messages.stream(
         model="claude-sonnet-4-6",
         max_tokens=1024,

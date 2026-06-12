@@ -5,7 +5,8 @@ import api from "@/lib/api";
 import type { CV, JobListing, SmartSearchResult, FitEvaluation } from "@/lib/types";
 import { JobFeed } from "@/components/jobs/JobFeed";
 import { Modal } from "@/components/ui/Modal";
-import { Search, Sparkles, Download } from "lucide-react";
+import { openTextAsPdf } from "@/lib/pdfExport";
+import { Search, Sparkles, Download, Mail, FileDown } from "lucide-react";
 
 export default function JobsPage() {
   const [jobs, setJobs] = useState<JobListing[]>([]);
@@ -32,7 +33,25 @@ export default function JobsPage() {
   const [fitResult, setFitResult] = useState<FitEvaluation | null>(null);
   const [fitLoading, setFitLoading] = useState(false);
 
-  async function loadJobs(params?: { title?: string; location?: string }) {
+  const [coverLetterText, setCoverLetterText] = useState<string | null>(null);
+  const [coverLetterLoading, setCoverLetterLoading] = useState(false);
+  const [coverLetterError, setCoverLetterError] = useState<string | null>(null);
+
+  const [remoteOnly, setRemoteOnly] = useState(false);
+  const [salaryMin, setSalaryMin] = useState("");
+  const [datePosted, setDatePosted] = useState("");
+  const [employmentType, setEmploymentType] = useState("");
+
+  type JobFilters = {
+    title?: string;
+    location?: string;
+    remote?: boolean;
+    salary_min?: number;
+    date_posted?: string;
+    employment_type?: string;
+  };
+
+  async function loadJobs(params?: JobFilters) {
     setLoading(true);
     setError(null);
     try {
@@ -53,9 +72,24 @@ export default function JobsPage() {
       .catch(() => {});
   }, []);
 
+  function currentFilters(): JobFilters {
+    return {
+      title: title || undefined,
+      location: location || undefined,
+      remote: remoteOnly || undefined,
+      salary_min: salaryMin ? Number(salaryMin) : undefined,
+      date_posted: datePosted || undefined,
+      employment_type: employmentType || undefined,
+    };
+  }
+
   function handleSearch(e: React.FormEvent) {
     e.preventDefault();
-    loadJobs({ title: title || undefined, location: location || undefined });
+    loadJobs(currentFilters());
+  }
+
+  function handleFilterChange() {
+    loadJobs(currentFilters());
   }
 
   async function handleSmartSearch() {
@@ -119,6 +153,8 @@ export default function JobsPage() {
     setTailoredText(null);
     setTailorError(null);
     setFitResult(null);
+    setCoverLetterText(null);
+    setCoverLetterError(null);
 
     const cv = activeCv();
     if (cv) {
@@ -156,6 +192,11 @@ export default function JobsPage() {
 
   function downloadTailored() {
     if (!tailoredText || !tailorJob) return;
+    openTextAsPdf(`cv-tailored-${(tailorJob.title ?? "job").toLowerCase().replace(/\s+/g, "-")}`, tailoredText);
+  }
+
+  function downloadTailoredTxt() {
+    if (!tailoredText || !tailorJob) return;
     const blob = new Blob([tailoredText], { type: "text/plain" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -163,6 +204,33 @@ export default function JobsPage() {
     a.download = `cv-tailored-${(tailorJob.title ?? "job").toLowerCase().replace(/\s+/g, "-")}.txt`;
     a.click();
     URL.revokeObjectURL(url);
+  }
+
+  async function handleGenerateCoverLetter() {
+    if (!tailorJob) return;
+    const cv = activeCv();
+    if (!cv) {
+      setCoverLetterError("Upload a CV first from the My CVs page.");
+      return;
+    }
+    setCoverLetterLoading(true);
+    setCoverLetterError(null);
+    try {
+      const { data } = await api.post<{ id: string; content: string }>(`/cv/${cv.id}/cover-letter`, {
+        job_description: tailorJob.description ?? tailorJob.title ?? "",
+        job_listing_id: tailorJob.id,
+      });
+      setCoverLetterText(data.content);
+    } catch {
+      setCoverLetterError("Failed to generate cover letter.");
+    } finally {
+      setCoverLetterLoading(false);
+    }
+  }
+
+  function downloadCoverLetter() {
+    if (!coverLetterText || !tailorJob) return;
+    openTextAsPdf(`cover-letter-${(tailorJob.title ?? "job").toLowerCase().replace(/\s+/g, "-")}`, coverLetterText);
   }
 
   return (
@@ -199,6 +267,56 @@ export default function JobsPage() {
           {smartLoading ? "Searching…" : "Smart Search"}
         </button>
       </form>
+
+      <div className="flex flex-wrap items-center gap-3">
+        <label className="flex items-center gap-2 text-sm text-slate-300">
+          <input
+            type="checkbox"
+            checked={remoteOnly}
+            onChange={(e) => {
+              setRemoteOnly(e.target.checked);
+              handleFilterChange();
+            }}
+            className="h-4 w-4 rounded border-white/10 bg-white/5 text-blue-500 focus:ring-blue-500/30"
+          />
+          Remote only
+        </label>
+        <input
+          type="number"
+          value={salaryMin}
+          onChange={(e) => setSalaryMin(e.target.value)}
+          onBlur={handleFilterChange}
+          placeholder="Min salary"
+          className="w-32 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100 outline-none transition-colors placeholder:text-slate-500 focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/30"
+        />
+        <select
+          value={datePosted}
+          onChange={(e) => {
+            setDatePosted(e.target.value);
+            handleFilterChange();
+          }}
+          className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100 outline-none transition-colors focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/30"
+        >
+          <option value="">Posted: Any time</option>
+          <option value="day">Last 24 hours</option>
+          <option value="week">Last week</option>
+          <option value="month">Last month</option>
+        </select>
+        <select
+          value={employmentType}
+          onChange={(e) => {
+            setEmploymentType(e.target.value);
+            handleFilterChange();
+          }}
+          className="rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-slate-100 outline-none transition-colors focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/30"
+        >
+          <option value="">Any employment type</option>
+          <option value="Full-time">Full-time</option>
+          <option value="Part-time">Part-time</option>
+          <option value="Contract">Contract</option>
+          <option value="Internship">Internship</option>
+        </select>
+      </div>
 
       {error && <p className="text-sm text-red-400">{error}</p>}
       {smartError && <p className="text-sm text-red-400">{smartError}</p>}
@@ -342,19 +460,51 @@ export default function JobsPage() {
             )}
 
             {tailorError && <p className="text-sm text-red-400">{tailorError}</p>}
-            {!tailoredText && (
-              <button onClick={handleTailor} disabled={tailorWorking} className="btn-primary">
-                {tailorWorking ? "Working…" : "Generate tailored CV"}
-              </button>
-            )}
+            <div className="flex flex-wrap gap-2">
+              {!tailoredText && (
+                <button onClick={handleTailor} disabled={tailorWorking} className="btn-primary">
+                  {tailorWorking ? "Working…" : "Generate tailored CV"}
+                </button>
+              )}
+              {!coverLetterText && (
+                <button onClick={handleGenerateCoverLetter} disabled={coverLetterLoading} className="btn-secondary">
+                  <Mail className="h-3.5 w-3.5" />
+                  {coverLetterLoading ? "Working…" : "Generate Cover Letter"}
+                </button>
+              )}
+            </div>
             {tailoredText && (
               <div className="space-y-3">
+                <p className="text-sm font-semibold text-white">Tailored CV</p>
                 <div className="max-h-80 overflow-y-auto whitespace-pre-wrap rounded-xl border border-white/10 bg-black/20 p-4 text-sm text-slate-200">
                   {tailoredText}
                 </div>
-                <button onClick={downloadTailored} className="btn-secondary">
-                  <Download className="h-3.5 w-3.5" />
-                  Download as .txt
+                <div className="flex flex-wrap gap-2">
+                  <button onClick={downloadTailored} className="btn-primary">
+                    <FileDown className="h-3.5 w-3.5" />
+                    Download PDF
+                  </button>
+                  <button onClick={downloadTailoredTxt} className="btn-secondary">
+                    <Download className="h-3.5 w-3.5" />
+                    Download as .txt
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {coverLetterError && <p className="text-sm text-red-400">{coverLetterError}</p>}
+            {coverLetterText && (
+              <div className="space-y-3">
+                <p className="text-sm font-semibold text-white">Cover Letter</p>
+                <textarea
+                  value={coverLetterText}
+                  onChange={(e) => setCoverLetterText(e.target.value)}
+                  rows={12}
+                  className="w-full resize-y rounded-xl border border-white/10 bg-black/20 p-4 text-sm text-slate-200 outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/30"
+                />
+                <button onClick={downloadCoverLetter} className="btn-primary">
+                  <FileDown className="h-3.5 w-3.5" />
+                  Download PDF
                 </button>
               </div>
             )}

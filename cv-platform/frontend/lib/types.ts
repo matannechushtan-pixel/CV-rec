@@ -187,7 +187,17 @@ export interface Application {
   status: "applied" | "viewed" | "interview" | "rejected" | "offer";
   applied_at: string;
   updated_at: string;
+  notes: string | null;
+  cover_letter_id: string | null;
   job?: JobListing;
+}
+
+export interface ApplicationStats {
+  applied: number;
+  viewed: number;
+  interview: number;
+  rejected: number;
+  offer: number;
 }
 
 export interface GapItem {
@@ -249,6 +259,13 @@ export interface InterviewQuestion {
   question: string;
   type: "behavioral" | "technical";
   guidance: string;
+}
+
+export interface AnswerEvaluation {
+  score: number;
+  strengths: string[];
+  improvements: string[];
+  better_answer: string;
 }
 
 export interface Company {

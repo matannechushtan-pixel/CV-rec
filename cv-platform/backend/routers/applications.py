@@ -38,6 +38,8 @@ class ApplicationOut(BaseModel):
     status: str
     applied_at: datetime
     updated_at: datetime
+    notes: str | None
+    cover_letter_id: uuid.UUID | None
     job: JobListingMini | None = Field(default=None, validation_alias="job_listing")
 
 
@@ -48,7 +50,8 @@ class CreateApplicationRequest(BaseModel):
 
 
 class UpdateApplicationRequest(BaseModel):
-    status: str
+    status: str | None = None
+    notes: str | None = None
 
 
 class ApplicationStats(BaseModel):
@@ -119,7 +122,7 @@ async def update_application(
     user: dict = Depends(require_job_seeker),
     db: AsyncSession = Depends(get_db),
 ):
-    if body.status not in ALLOWED_STATUSES:
+    if body.status is not None and body.status not in ALLOWED_STATUSES:
         raise HTTPException(status_code=400, detail="Invalid status")
 
     user_id = uuid.UUID(user["id"])
@@ -137,7 +140,10 @@ async def update_application(
     if not application:
         raise HTTPException(status_code=404, detail="Application not found")
 
-    application.status = body.status
+    if body.status is not None:
+        application.status = body.status
+    if body.notes is not None:
+        application.notes = body.notes
     await db.flush()
     await db.refresh(application, attribute_names=["job_listing"])
     return application

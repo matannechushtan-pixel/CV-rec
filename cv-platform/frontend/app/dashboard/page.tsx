@@ -1,6 +1,9 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import api from "@/lib/api";
+import type { ApplicationStats, CV } from "@/lib/types";
 import {
   FileText,
   Briefcase,
@@ -44,12 +47,46 @@ const sections = [
 ];
 
 export default function DashboardPage() {
+  const [cvCount, setCvCount] = useState<number | null>(null);
+  const [stats, setStats] = useState<ApplicationStats | null>(null);
+
+  useEffect(() => {
+    api
+      .get<CV[]>("/cv/")
+      .then(({ data }) => setCvCount(data.length))
+      .catch(() => {});
+    api
+      .get<ApplicationStats>("/applications/stats")
+      .then(({ data }) => setStats(data))
+      .catch(() => {});
+  }, []);
+
+  const totalApplications = stats
+    ? stats.applied + stats.viewed + stats.interview + stats.rejected + stats.offer
+    : null;
+
+  const statCards = [
+    { label: "CVs created", value: cvCount },
+    { label: "Applications", value: totalApplications },
+    { label: "Interviews", value: stats?.interview ?? null },
+    { label: "Offers", value: stats?.offer ?? null },
+  ];
+
   return (
     <div>
       <h1 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">Dashboard</h1>
       <p className="mb-8 mt-2 text-sm text-slate-400">
         Welcome back. What would you like to do today?
       </p>
+
+      <div className="mb-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        {statCards.map((s) => (
+          <div key={s.label} className="glass-card p-4">
+            <p className="text-xs uppercase tracking-wide text-slate-500">{s.label}</p>
+            <p className="mt-1 text-2xl font-bold text-white">{s.value ?? "–"}</p>
+          </div>
+        ))}
+      </div>
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {sections.map((s) => {

@@ -25,8 +25,10 @@ export default function AuthCallbackPage() {
   }, [router]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-50 px-4">
-      <p className="text-sm text-slate-500">Signing you in…</p>
+    <div className="mesh-bg flex min-h-screen items-center justify-center bg-navy px-4">
+      <div className="glass-card w-full max-w-sm p-8 text-center">
+        <p className="text-sm text-slate-300">Signing you in…</p>
+      </div>
     </div>
   );
 }

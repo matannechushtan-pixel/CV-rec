@@ -14,13 +14,16 @@ from core.auth import require_job_seeker
 from core.database import get_db
 from core.supabase_client import upload_cv_pdf
 from models.cv import CV
+from models.cover_letter import CoverLetter
 from models.job import JobListing
 from models.user import Profile
-from agents import brainstorm_agent, cv_agent, gemini_cv_agent, match_agent
+from agents import brainstorm_agent, cover_letter_agent, cv_agent, gemini_cv_agent, match_agent
 from services.cv_html_builder import build_cv_html, get_templates
 from services.embeddings import embed_text
 from services.cv_parser import extract_text
 from services.latex_builder import build_latex_cv, render_cv_pdf
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
@@ -129,6 +132,21 @@ class TailorResponse(BaseModel):
     tailored_text: str
 
 
+class CoverLetterRequest(BaseModel):
+    job_description: str
+    company_culture: str | None = None
+    job_listing_id: str | None = None
+
+
+class CoverLetterOut(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    id: uuid.UUID
+    job_listing_id: uuid.UUID | None
+    content: str | None
+    created_at: datetime
+
+
 class GapItemOut(BaseModel):
     gap: str
     importance: str
@@ -228,7 +246,8 @@ async def upload_cv(
     try:
         structured = await cv_agent.parse_cv(text)
     except Exception:
-        raise HTTPException(status_code=502, detail="Failed to parse CV")
+        logger.warning("Failed to parse CV for %s, saving without structured data", file.filename)
+        structured = None
 
     user_id = uuid.UUID(user["id"])
 
@@ -243,6 +262,28 @@ async def upload_cv(
         is_base=not has_existing,
     )
     db.add(cv)
+    await db.flush()
+    await db.refresh(cv)
+    return cv
+
+
+@router.post("/{cv_id}/parse", response_model=CVOut)
+async def parse_cv(
+    cv_id: str,
+    user: dict = Depends(require_job_seeker),
+    db: AsyncSession = Depends(get_db),
+):
+    user_id = uuid.UUID(user["id"])
+    cv = await _get_owned_cv(db, user_id, cv_id)
+
+    if not cv.raw_text:
+        raise HTTPException(status_code=400, detail="This CV has no extracted text to parse")
+
+    try:
+        cv.structured_data = await cv_agent.parse_cv(cv.raw_text)
+    except Exception:
+        raise HTTPException(status_code=502, detail="Failed to parse CV")
+
     await db.flush()
     await db.refresh(cv)
     return cv
@@ -379,6 +420,42 @@ async def list_cvs(user: dict = Depends(require_job_seeker), db: AsyncSession = 
     return result.scalars().all()
 
 
+@router.get("/cover-letters", response_model=list[CoverLetterOut])
+async def list_cover_letters(
+    user: dict = Depends(require_job_seeker), db: AsyncSession = Depends(get_db)
+):
+    user_id = uuid.UUID(user["id"])
+    result = await db.execute(
+        select(CoverLetter)
+        .where(CoverLetter.user_id == user_id)
+        .order_by(CoverLetter.created_at.desc())
+    )
+    return result.scalars().all()
+
+
+@router.delete("/cover-letters/{cover_letter_id}", status_code=204)
+async def delete_cover_letter(
+    cover_letter_id: str,
+    user: dict = Depends(require_job_seeker),
+    db: AsyncSession = Depends(get_db),
+):
+    user_id = uuid.UUID(user["id"])
+    try:
+        cl_uuid = uuid.UUID(cover_letter_id)
+    except ValueError:
+        raise HTTPException(status_code=404, detail="Cover letter not found")
+
+    result = await db.execute(
+        select(CoverLetter).where(CoverLetter.id == cl_uuid, CoverLetter.user_id == user_id)
+    )
+    cover_letter = result.scalar_one_or_none()
+    if not cover_letter:
+        raise HTTPException(status_code=404, detail="Cover letter not found")
+
+    await db.delete(cover_letter)
+    return None
+
+
 @router.get("/{cv_id}", response_model=CVOut)
 async def get_cv(
     cv_id: str, user: dict = Depends(require_job_seeker), db: AsyncSession = Depends(get_db)
@@ -422,6 +499,56 @@ async def tailor_cv(
         raise HTTPException(status_code=502, detail="Failed to tailor CV")
 
     return TailorResponse(tailored_text=tailored)
+
+
+@router.post("/{cv_id}/cover-letter", response_model=CoverLetterOut)
+async def generate_cover_letter(
+    cv_id: str,
+    body: CoverLetterRequest,
+    user: dict = Depends(require_job_seeker),
+    db: AsyncSession = Depends(get_db),
+):
+    user_id = uuid.UUID(user["id"])
+    cv = await _get_owned_cv(db, user_id, cv_id)
+    if not cv.raw_text:
+        raise HTTPException(status_code=400, detail="CV has no extracted text")
+
+    result = await db.execute(
+        select(Profile.full_name, Profile.writing_style).where(Profile.user_id == user_id)
+    )
+    row = result.first()
+    full_name = row[0] if row else None
+    writing_style = row[1] if row else None
+
+    job_listing_uuid: uuid.UUID | None = None
+    if body.job_listing_id:
+        try:
+            job_listing_uuid = uuid.UUID(body.job_listing_id)
+        except ValueError:
+            raise HTTPException(status_code=400, detail="Invalid job_listing_id")
+
+    try:
+        kwargs = dict(
+            cv_text=cv.raw_text,
+            candidate_name=full_name or "Candidate",
+            job_description=body.job_description,
+            writing_style=writing_style,
+        )
+        if body.company_culture:
+            kwargs["company_culture"] = body.company_culture
+        content = await cover_letter_agent.generate_cover_letter(**kwargs)
+    except Exception:
+        raise HTTPException(status_code=502, detail="Failed to generate cover letter")
+
+    cover_letter = CoverLetter(
+        user_id=user_id,
+        job_listing_id=job_listing_uuid,
+        content=content,
+    )
+    db.add(cover_letter)
+    await db.flush()
+    await db.refresh(cover_letter)
+    return cover_letter
 
 
 @router.post("/{cv_id}/gap-analysis", response_model=MultiGapAnalysisResponse)

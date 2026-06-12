@@ -1,5 +1,5 @@
 import uuid
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, ConfigDict
@@ -107,6 +107,10 @@ async def _refresh_jobs(db: AsyncSession, title: str, location: str) -> None:
 async def list_jobs(
     title: str | None = None,
     location: str | None = None,
+    remote: bool | None = None,
+    salary_min: int | None = None,
+    date_posted: str | None = None,
+    employment_type: str | None = None,
     user: dict = Depends(require_job_seeker),
     db: AsyncSession = Depends(get_db),
 ):
@@ -125,6 +129,22 @@ async def list_jobs(
     if title:
         query = query.where(
             or_(JobListing.title.ilike(f"%{title}%"), JobListing.description.ilike(f"%{title}%"))
+        )
+    if remote:
+        query = query.where(
+            or_(JobListing.location.ilike("%remote%"), JobListing.description.ilike("%remote%"))
+        )
+    if salary_min is not None:
+        query = query.where(
+            or_(JobListing.salary_min >= salary_min, JobListing.salary_max >= salary_min)
+        )
+    if date_posted in ("day", "week", "month"):
+        days = {"day": 1, "week": 7, "month": 30}[date_posted]
+        cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+        query = query.where(JobListing.fetched_at >= cutoff)
+    if employment_type:
+        query = query.where(
+            JobListing.required_skills["employment_type"].astext.ilike(employment_type)
         )
     query = query.limit(30)
 

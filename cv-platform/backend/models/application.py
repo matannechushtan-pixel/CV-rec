@@ -1,6 +1,6 @@
 import uuid
 from datetime import datetime
-from sqlalchemy import String, Float, ForeignKey, DateTime, func
+from sqlalchemy import String, Float, Text, ForeignKey, DateTime, func
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -24,6 +24,8 @@ class Application(Base):
     updated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now(), onupdate=func.now()
     )
+    notes: Mapped[str | None] = mapped_column(Text)
+    cover_letter_id: Mapped[uuid.UUID | None] = mapped_column(ForeignKey("cover_letters.id"))
 
     user: Mapped["User"] = relationship("User", back_populates="applications")  # noqa: F821
     job_listing: Mapped["JobListing"] = relationship("JobListing", back_populates="applications")  # noqa: F821

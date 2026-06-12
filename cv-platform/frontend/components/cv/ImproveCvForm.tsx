@@ -56,12 +56,18 @@ export function ImproveCvForm({ onCreated }: { onCreated: (cv: CV) => void }) {
     <div className="space-y-4">
       <div>
         <label className="mb-1 block text-sm font-medium text-slate-300">CV file (PDF or DOCX)</label>
-        <input
-          type="file"
-          accept=".pdf,.docx,.doc"
-          onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-          className="block w-full text-sm text-slate-300 file:mr-3 file:rounded-lg file:border-0 file:bg-blue-600 file:px-3 file:py-2 file:text-sm file:font-medium file:text-white hover:file:bg-blue-500"
-        />
+        <div className="flex items-center gap-3">
+          <label className="btn-secondary cursor-pointer">
+            Choose file
+            <input
+              type="file"
+              accept=".pdf,.docx,.doc"
+              onChange={(e) => setFile(e.target.files?.[0] ?? null)}
+              className="hidden"
+            />
+          </label>
+          <span className="text-sm text-slate-400">{file ? file.name : "No file selected"}</span>
+        </div>
       </div>
 
       <div className="flex flex-col gap-2 sm:max-w-xs">

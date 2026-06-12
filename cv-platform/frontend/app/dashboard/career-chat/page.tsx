@@ -95,6 +95,27 @@ export default function CareerChatPage() {
       .catch(() => {});
   }, []);
 
+  function storageKey(cvId: string | null) {
+    return `career-chat-messages-${cvId ?? "none"}`;
+  }
+
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem(storageKey(selectedCvId));
+      setMessages(stored ? (JSON.parse(stored) as ChatMessage[]) : []);
+    } catch {
+      setMessages([]);
+    }
+  }, [selectedCvId]);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(storageKey(selectedCvId), JSON.stringify(messages));
+    } catch {
+      // ignore storage errors
+    }
+  }, [messages, selectedCvId]);
+
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
   }, [messages]);
@@ -199,7 +220,7 @@ export default function CareerChatPage() {
 
         <button type="button" onClick={newConversation} className="btn-secondary w-full justify-center">
           <Plus className="h-3.5 w-3.5" />
-          New conversation
+          Clear conversation
         </button>
 
         {cvs.length > 0 && (

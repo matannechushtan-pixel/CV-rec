@@ -29,6 +29,18 @@ class InterviewQuestionsResponse(BaseModel):
     questions: list[InterviewQuestionOut]
 
 
+class EvaluateAnswerRequest(BaseModel):
+    question: str
+    user_answer: str
+
+
+class EvaluateAnswerResponse(BaseModel):
+    score: int
+    strengths: list[str]
+    improvements: list[str]
+    better_answer: str
+
+
 @router.post("/questions", response_model=InterviewQuestionsResponse)
 async def generate_questions(
     body: InterviewQuestionsRequest,
@@ -59,3 +71,31 @@ async def generate_questions(
         raise HTTPException(status_code=502, detail="Failed to generate interview questions")
 
     return generated
+
+
+@router.post("/evaluate", response_model=EvaluateAnswerResponse)
+async def evaluate_answer(
+    body: EvaluateAnswerRequest,
+    user: dict = Depends(require_job_seeker),
+    db: AsyncSession = Depends(get_db),
+):
+    user_id = uuid.UUID(user["id"])
+
+    result = await db.execute(
+        select(CV)
+        .where(CV.user_id == user_id)
+        .order_by(CV.is_base.desc(), CV.created_at.desc())
+        .limit(1)
+    )
+    cv = result.scalars().first()
+    if not cv or not cv.raw_text:
+        raise HTTPException(status_code=400, detail="Upload a CV before getting feedback")
+
+    try:
+        evaluation = await interview_agent.evaluate_answer(
+            body.question, body.user_answer, cv.raw_text
+        )
+    except Exception:
+        raise HTTPException(status_code=502, detail="Failed to evaluate answer")
+
+    return evaluation
