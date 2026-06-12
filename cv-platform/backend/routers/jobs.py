@@ -14,6 +14,7 @@ from models.job import JobListing
 from models.user import Profile
 from services.adzuna import fetch_adzuna_jobs
 from services.jsearch import fetch_jsearch_jobs
+from services.jobs_api14 import fetch_jobs_api14
 from services.recommendation_engine import recommend_jobs
 from services.salary_lookup import get_salary_range
 from agents import search_agent
@@ -87,6 +88,10 @@ async def _refresh_jobs(db: AsyncSession, title: str, location: str) -> None:
         pass
     try:
         fetched += await fetch_jsearch_jobs(title, location)
+    except Exception:
+        pass
+    try:
+        fetched += await fetch_jobs_api14(title, location)
     except Exception:
         pass
 

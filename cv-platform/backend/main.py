@@ -9,7 +9,7 @@ from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from core.database import get_db
-from routers import auth, cv, jobs, applications, roadmap, company, interview, admin, profile, career_chat
+from routers import auth, cv, jobs, applications, roadmap, company, interview, admin, profile, career_chat, discord
 
 limiter = Limiter(key_func=get_remote_address)
 
@@ -46,6 +46,7 @@ app.include_router(interview.router, prefix="/interview", tags=["interview"])
 app.include_router(admin.router, prefix="/admin", tags=["admin"])
 app.include_router(profile.router, prefix="/profile", tags=["profile"])
 app.include_router(career_chat.router, prefix="", tags=["chat"])
+app.include_router(discord.router, prefix="/discord", tags=["discord"])
 
 
 @app.get("/health")

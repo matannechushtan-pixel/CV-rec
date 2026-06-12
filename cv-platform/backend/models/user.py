@@ -20,6 +20,7 @@ class User(Base):
     profile: Mapped["Profile"] = relationship("Profile", back_populates="user", uselist=False)
     cvs: Mapped[list["CV"]] = relationship("CV", back_populates="user")  # noqa: F821
     applications: Mapped[list["Application"]] = relationship("Application", back_populates="user")  # noqa: F821
+    discord_connection: Mapped["DiscordConnection | None"] = relationship("DiscordConnection", back_populates="user", uselist=False)  # noqa: F821
 
 
 class Profile(Base):

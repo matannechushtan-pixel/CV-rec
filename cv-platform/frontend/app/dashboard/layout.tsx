@@ -8,6 +8,7 @@ import {
   Map,
   MessageSquare,
   Compass,
+  Settings,
 } from "lucide-react";
 import { DashboardShell } from "@/components/layout/DashboardShell";
 import type { SidebarNavItem } from "@/components/layout/Sidebar";
@@ -20,6 +21,7 @@ const navItems: SidebarNavItem[] = [
   { label: "Career Roadmap", href: "/dashboard/roadmap", icon: Map },
   { label: "Interview Prep", href: "/dashboard/interview-prep", icon: MessageSquare },
   { label: "Career Coach", href: "/dashboard/career-chat", icon: Compass },
+  { label: "Settings", href: "/dashboard/settings", icon: Settings },
 ];
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {

@@ -7,7 +7,7 @@ celery_app = Celery(
     "cv_platform",
     broker=settings.REDIS_URL,
     backend=settings.REDIS_URL,
-    include=["tasks.job_refresh", "tasks.scoring"],
+    include=["tasks.job_refresh", "tasks.scoring", "tasks.discord_notifications"],
 )
 
 celery_app.conf.beat_schedule = {
@@ -15,10 +15,13 @@ celery_app.conf.beat_schedule = {
         "task": "tasks.job_refresh.refresh_all_jobs",
         "schedule": crontab(minute=0, hour="*/6"),
     },
-    # NEW — check email for job alerts every hour
     "check-job-emails-hourly": {
         "task": "tasks.job_refresh.check_job_emails",
-        "schedule": crontab(minute=0),  # every hour at :00
+        "schedule": crontab(minute=0),
+    },
+    "discord-daily-jobs-1400": {
+        "task": "tasks.discord_notifications.send_daily_jobs",
+        "schedule": crontab(hour=11, minute=0),  # 14:00 Israel time (UTC+3)
     },
 }
 
