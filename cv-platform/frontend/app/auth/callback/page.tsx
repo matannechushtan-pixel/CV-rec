@@ -1,23 +1,35 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { exchangeCodeForSession } from "@/lib/auth";
 
 export default function AuthCallbackPage() {
   const router = useRouter();
+  const hasRun = useRef(false);
 
   useEffect(() => {
+    // Guard against React StrictMode double-invocation consuming the PKCE code twice
+    if (hasRun.current) return;
+    hasRun.current = true;
+
     (async () => {
       const params = new URLSearchParams(window.location.search);
-      const roleParam = params.get("role");
-      const role = roleParam === "company_admin" || roleParam === "job_seeker" ? roleParam : undefined;
+      const code = params.get("code");
+      // Role is stored in localStorage before OAuth redirect — don't rely on URL params
+      const rawRole = localStorage.getItem("pending_oauth_role");
+      const role = rawRole === "company_admin" || rawRole === "job_seeker" ? rawRole : undefined;
 
       try {
-        const { user } = await exchangeCodeForSession(window.location.href, role);
+        if (!code) {
+          throw new Error("Missing OAuth callback code");
+        }
+
+        const { user } = await exchangeCodeForSession(code, role);
         localStorage.removeItem("pending_oauth_role");
         router.replace(user.role === "company_admin" ? "/company" : "/dashboard");
-      } catch {
+      } catch (error) {
+        console.error("Google OAuth callback failed", error);
         localStorage.removeItem("pending_oauth_role");
         router.replace("/auth/login?error=oauth");
       }
