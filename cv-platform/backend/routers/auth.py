@@ -129,6 +129,17 @@ async def oauth_sync(
     db_user = result.scalar_one_or_none()
 
     if not db_user:
+        # Fallback: same email may exist with a stale UUID (e.g. user deleted &
+        # re-registered in Supabase). Re-key the record to the new UUID.
+        email_result = await db.execute(select(User).where(User.email == user["email"]))
+        stale_user = email_result.scalar_one_or_none()
+        if stale_user:
+            await db.execute(
+                select(Profile).where(Profile.user_id == stale_user.id)
+            )
+            await db.delete(stale_user)
+            await db.flush()
+
         metadata = user.get("user_metadata", {})
         candidate_role = body.role or metadata.get("role")
         role = candidate_role if candidate_role in ("job_seeker", "company_admin") else "job_seeker"
@@ -140,6 +151,16 @@ async def oauth_sync(
             db.add(Profile(user_id=user_id, full_name=full_name))
 
         await db.flush()
+
+        # Sync role back to Supabase user_metadata so require_job_seeker /
+        # require_company_admin checks pass on subsequent requests.
+        try:
+            get_supabase().auth.admin.update_user_by_id(
+                str(user_id),
+                {"user_metadata": {"role": role}},
+            )
+        except Exception as e:
+            logger.warning("Failed to sync role to Supabase metadata: %s", e)
 
     return {"id": str(db_user.id), "email": db_user.email, "role": db_user.role}
 

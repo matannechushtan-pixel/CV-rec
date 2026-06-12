@@ -59,12 +59,11 @@ export async function logout() {
 }
 
 export async function signInWithGoogle() {
-  let redirectTo = `${window.location.origin}/auth/callback`;
-
-  const pendingRole = localStorage.getItem("pending_oauth_role");
-  if (pendingRole === "company_admin" || pendingRole === "job_seeker") {
-    redirectTo += `?role=${pendingRole}`;
-  }
+  // Always use a clean redirect URL — no query params.
+  // Supabase PKCE state validation requires the redirectTo to match exactly what's
+  // whitelisted in the Supabase dashboard. The role is preserved via localStorage
+  // (pending_oauth_role) and read in the callback page.
+  const redirectTo = `${window.location.origin}/auth/callback`;
 
   const { error } = await supabase.auth.signInWithOAuth({
     provider: "google",
@@ -74,10 +73,10 @@ export async function signInWithGoogle() {
 }
 
 export async function exchangeCodeForSession(
-  url: string,
+  code: string,
   role?: "job_seeker" | "company_admin"
 ): Promise<AuthResponse> {
-  const { data, error } = await supabase.auth.exchangeCodeForSession(url);
+  const { data, error } = await supabase.auth.exchangeCodeForSession(code);
   if (error || !data.session) {
     throw error ?? new Error("No session returned from Supabase");
   }
