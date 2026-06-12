@@ -1,0 +1,12 @@
+[
+  { "id": "inter", "name": "Inter", "google": true },
+  { "id": "roboto", "name": "Roboto", "google": true },
+  { "id": "opensans", "name": "Open Sans", "google": true },
+  { "id": "lato", "name": "Lato", "google": true },
+  { "id": "montserrat", "name": "Montserrat", "google": true },
+  { "id": "playfair", "name": "Playfair Display", "google": true },
+  { "id": "merriweather", "name": "Merriweather", "google": true },
+  { "id": "georgia", "name": "Georgia", "google": false },
+  { "id": "times", "name": "Times New Roman", "google": false },
+  { "id": "arial", "name": "Arial", "google": false }
+]

@@ -41,9 +41,11 @@ async def generate_cover_letter(
         writing_style_instructions=writing_style_instructions,
     )
 
-    gemini = get_gemini("gemini-2.0-flash")
+    gemini = get_gemini()
     if gemini is not None:
-        resp = await gemini.generate_content_async(prompt)
+        resp = await gemini.aio.models.generate_content(
+            model="gemini-2.0-flash", contents=prompt
+        )
         return resp.text
 
     # Fall back to Anthropic when GEMINI_API_KEY is not configured.

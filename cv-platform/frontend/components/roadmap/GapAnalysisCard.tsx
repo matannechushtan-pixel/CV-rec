@@ -6,9 +6,12 @@ const importanceColor = {
   nice_to_have: "bg-white/10 text-slate-400",
 };
 
-export function GapAnalysisCard({ analysis }: { analysis: GapAnalysis }) {
+export function GapAnalysisCard({ analysis, label }: { analysis: GapAnalysis; label?: string }) {
   return (
     <div className="glass-card space-y-4 p-5">
+      {label && (
+        <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">{label}</p>
+      )}
       <div className="flex items-center gap-3">
         <span className="text-3xl font-extrabold gradient-text">{analysis.match_percentage}%</span>
         <span className="text-sm text-slate-400">overall match</span>

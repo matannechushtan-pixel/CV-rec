@@ -6,15 +6,21 @@ export function Modal({
   title,
   onClose,
   children,
+  wide,
 }: {
   title: string;
   onClose: () => void;
   children: React.ReactNode;
+  wide?: boolean;
 }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
-      <div className="glass-card relative max-h-[85vh] w-full max-w-2xl overflow-y-auto bg-navy-light p-6">
+      <div
+        className={`glass-card relative max-h-[85vh] w-full overflow-y-auto bg-navy-light p-6 ${
+          wide ? "max-w-4xl" : "max-w-2xl"
+        }`}
+      >
         <div className="mb-4 flex items-center justify-between">
           <h2 className="text-lg font-semibold text-white">{title}</h2>
           <button

@@ -21,6 +21,10 @@ class CV(Base):
     pdf_url: Mapped[str | None] = mapped_column(Text)
     latex_source: Mapped[str | None] = mapped_column(Text)
     font_id: Mapped[str | None] = mapped_column(String)
+    html_content: Mapped[str | None] = mapped_column(Text)
+    source: Mapped[str | None] = mapped_column(String)
+    language: Mapped[str | None] = mapped_column(String)
+    cv_template_id: Mapped[str | None] = mapped_column(String)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), server_default=func.now()
     )

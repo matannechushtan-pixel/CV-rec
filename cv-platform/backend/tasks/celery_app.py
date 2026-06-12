@@ -15,6 +15,11 @@ celery_app.conf.beat_schedule = {
         "task": "tasks.job_refresh.refresh_all_jobs",
         "schedule": crontab(minute=0, hour="*/6"),
     },
+    # NEW — check email for job alerts every hour
+    "check-job-emails-hourly": {
+        "task": "tasks.job_refresh.check_job_emails",
+        "schedule": crontab(minute=0),  # every hour at :00
+    },
 }
 
 celery_app.conf.timezone = "UTC"

@@ -1,3 +1,4 @@
+import asyncio
 import json
 import anthropic
 
@@ -37,7 +38,32 @@ async def extract_skills(job_description: str) -> dict:
     return json.loads(msg.content[0].text)
 
 
-async def fetch_jobs_for_profile(title: str, location: str, limit: int = 20) -> list[dict]:
-    adzuna = await fetch_adzuna_jobs(title, location, limit)
-    jsearch = await fetch_jsearch_jobs(title, location, limit)
-    return adzuna + jsearch
+async def fetch_jobs_for_profile(
+    title:    str,
+    location: str  = "Israel",
+    limit:    int  = 40,
+) -> list[dict]:
+    """
+    Fetch jobs from all sources for a given profile.
+    JSearch is primary for Israel; Adzuna is secondary.
+    """
+    # Run both in parallel
+    jsearch_task = fetch_jsearch_jobs(
+        title=title,
+        location=location,
+        pages=2,
+        max_jobs=35,
+    )
+    adzuna_task = fetch_adzuna_jobs(title, location, limit=15)
+
+    jsearch_jobs, adzuna_jobs = await asyncio.gather(
+        jsearch_task, adzuna_task, return_exceptions=True
+    )
+
+    all_jobs = []
+    if isinstance(jsearch_jobs, list):
+        all_jobs.extend(jsearch_jobs)
+    if isinstance(adzuna_jobs, list):
+        all_jobs.extend(adzuna_jobs)
+
+    return all_jobs[:limit]

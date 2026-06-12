@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { register, signInWithGoogle } from "@/lib/auth";
 import { getUser } from "@/lib/auth";
+import { authErrorFrom } from "@/lib/utils";
 
 export default function RegisterPage() {
   return (
@@ -53,10 +54,7 @@ function RegisterForm() {
       const user = getUser();
       router.push(user?.role === "company_admin" ? "/company" : "/dashboard");
     } catch (err: unknown) {
-      const msg =
-        (err as { response?: { data?: { detail?: string } } })?.response?.data?.detail ??
-        "Registration failed";
-      setError(msg);
+      setError(authErrorFrom(err, "Registration failed"));
     } finally {
       setLoading(false);
     }

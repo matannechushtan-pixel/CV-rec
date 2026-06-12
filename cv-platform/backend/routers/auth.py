@@ -1,4 +1,7 @@
+import logging
 import uuid
+from threading import Lock
+
 from fastapi import APIRouter, HTTPException, Depends
 from pydantic import BaseModel, EmailStr
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -11,8 +14,26 @@ from core.auth import get_current_user
 from models.user import User, Profile
 
 router = APIRouter()
+logger = logging.getLogger(__name__)
 
-_supabase: Client = create_client(settings.SUPABASE_URL, settings.SUPABASE_SERVICE_KEY)
+_supabase_lock = Lock()
+_supabase_client: Client | None = None
+
+
+def get_supabase() -> Client:
+    global _supabase_client
+    with _supabase_lock:
+        if _supabase_client is None:
+            _supabase_client = create_client(
+                settings.SUPABASE_URL, settings.SUPABASE_SERVICE_KEY
+            )
+    return _supabase_client
+
+
+def reset_supabase():
+    global _supabase_client
+    with _supabase_lock:
+        _supabase_client = None
 
 
 class RegisterRequest(BaseModel):
@@ -37,7 +58,7 @@ async def register(body: RegisterRequest, db: AsyncSession = Depends(get_db)):
         raise HTTPException(status_code=400, detail="role must be job_seeker or company_admin")
 
     try:
-        res = _supabase.auth.admin.create_user(
+        res = get_supabase().auth.admin.create_user(
             {
                 "email": body.email,
                 "password": body.password,
@@ -46,6 +67,8 @@ async def register(body: RegisterRequest, db: AsyncSession = Depends(get_db)):
             }
         )
     except Exception as e:
+        reset_supabase()
+        logger.error("Supabase error during register: %s", e, exc_info=True)
         raise HTTPException(status_code=400, detail=str(e))
 
     supabase_id = uuid.UUID(res.user.id)
@@ -57,9 +80,14 @@ async def register(body: RegisterRequest, db: AsyncSession = Depends(get_db)):
 
     await db.flush()
 
-    sign_in = _supabase.auth.sign_in_with_password(
-        {"email": body.email, "password": body.password}
-    )
+    try:
+        sign_in = get_supabase().auth.sign_in_with_password(
+            {"email": body.email, "password": body.password}
+        )
+    except Exception as e:
+        reset_supabase()
+        logger.error("Supabase error during post-register sign-in: %s", e, exc_info=True)
+        raise HTTPException(status_code=400, detail=str(e))
 
     return {
         "access_token": sign_in.session.access_token,
@@ -71,10 +99,12 @@ async def register(body: RegisterRequest, db: AsyncSession = Depends(get_db)):
 @router.post("/login")
 async def login(body: LoginRequest):
     try:
-        res = _supabase.auth.sign_in_with_password(
+        res = get_supabase().auth.sign_in_with_password(
             {"email": body.email, "password": body.password}
         )
-    except Exception:
+    except Exception as e:
+        reset_supabase()
+        logger.error("Supabase error during login: %s", e, exc_info=True)
         raise HTTPException(status_code=401, detail="Invalid credentials")
 
     return {

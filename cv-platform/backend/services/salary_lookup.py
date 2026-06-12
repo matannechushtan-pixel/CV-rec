@@ -69,9 +69,11 @@ async def _adzuna_salary_range(job_title: str, location: str, country: str = "us
 async def _ai_salary_estimate(job_title: str, location: str) -> dict:
     prompt = _ESTIMATE_PROMPT.format(job_title=job_title, location=location)
 
-    gemini = get_gemini("gemini-2.0-flash")
+    gemini = get_gemini()
     if gemini is not None:
-        resp = await gemini.generate_content_async(prompt)
+        resp = await gemini.aio.models.generate_content(
+            model="gemini-2.0-flash", contents=prompt
+        )
         data = _extract_json(resp.text)
     else:
         msg = await anthropic_client.messages.create(

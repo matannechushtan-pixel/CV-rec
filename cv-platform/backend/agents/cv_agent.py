@@ -1,7 +1,13 @@
+import asyncio
 import json
 import re
 
-from core.ai_providers import anthropic_client as _client, get_gemini
+from core.ai_providers import (
+    claude_generate,
+    get_gemini,
+    gpt_generate,
+    OPENAI_AVAILABLE,
+)
 
 
 def _extract_json(text: str) -> dict:
@@ -137,17 +143,10 @@ Return JSON only (no markdown), with the same shape as the input CV data:
 
 
 async def generate_cv_from_description(description: str, language: str = "English") -> dict:
-    msg = await _client.messages.create(
-        model="claude-sonnet-4-6",
-        max_tokens=2048,
-        messages=[
-            {
-                "role": "user",
-                "content": _GENERATE_PROMPT.format(description=description, language=language),
-            }
-        ],
+    raw = await claude_generate(
+        _GENERATE_PROMPT.format(description=description, language=language), max_tokens=2048
     )
-    return _extract_json(msg.content[0].text)
+    return _extract_json(raw)
 
 
 async def improve_and_translate_cv(structured_data: dict, language: str = "English") -> dict:
@@ -155,26 +154,20 @@ async def improve_and_translate_cv(structured_data: dict, language: str = "Engli
         cv_json=json.dumps(structured_data, ensure_ascii=False), language=language
     )
 
-    gemini = get_gemini("gemini-2.0-flash")
+    gemini = get_gemini()
     if gemini is not None:
-        resp = await gemini.generate_content_async(prompt)
+        resp = await gemini.aio.models.generate_content(
+            model="gemini-2.0-flash", contents=prompt
+        )
         return _extract_json(resp.text)
 
-    msg = await _client.messages.create(
-        model="claude-sonnet-4-6",
-        max_tokens=4096,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    return _extract_json(msg.content[0].text)
+    raw = await claude_generate(prompt, max_tokens=4096)
+    return _extract_json(raw)
 
 
 async def parse_cv(cv_text: str) -> dict:
-    msg = await _client.messages.create(
-        model="claude-sonnet-4-6",
-        max_tokens=2048,
-        messages=[{"role": "user", "content": _PARSE_PROMPT.format(cv_text=cv_text)}],
-    )
-    return _extract_json(msg.content[0].text)
+    raw = await claude_generate(_PARSE_PROMPT.format(cv_text=cv_text), max_tokens=2048)
+    return _extract_json(raw)
 
 
 async def tailor_cv(cv_text: str, job_description: str, writing_style: dict | None = None) -> str:
@@ -185,37 +178,87 @@ async def tailor_cv(cv_text: str, job_description: str, writing_style: dict | No
             f"{json.dumps(writing_style)}\n"
         )
 
-    msg = await _client.messages.create(
-        model="claude-sonnet-4-6",
+    return await claude_generate(
+        _TAILOR_PROMPT.format(
+            cv_text=cv_text,
+            job_description=job_description,
+            writing_style_instructions=writing_style_instructions,
+        ),
         max_tokens=4096,
-        messages=[
-            {
-                "role": "user",
-                "content": _TAILOR_PROMPT.format(
-                    cv_text=cv_text,
-                    job_description=job_description,
-                    writing_style_instructions=writing_style_instructions,
-                ),
-            }
-        ],
     )
-    return msg.content[0].text
 
 
 async def gap_analysis(cv_text: str, job_description: str) -> dict:
-    msg = await _client.messages.create(
-        model="claude-sonnet-4-6",
+    raw = await claude_generate(
+        _GAP_PROMPT.format(cv_text=cv_text, job_description=job_description),
         max_tokens=2048,
-        messages=[
-            {
-                "role": "user",
-                "content": _GAP_PROMPT.format(
-                    cv_text=cv_text, job_description=job_description
-                ),
-            }
-        ],
     )
-    return _extract_json(msg.content[0].text)
+    return _extract_json(raw)
+
+
+_CV_ONLY_GAP_PROMPT = """
+You are an expert career coach. Analyze the candidate's CV below WITHOUT a specific
+job description. Assess the overall quality and competitiveness of the CV on the
+current job market.
+
+Return JSON only (no markdown):
+{{
+  "overall_score": 0,
+  "summary": "a short 2-3 sentence overview of the CV's strengths and weaknesses",
+  "missing_sections": ["sections that are absent but would strengthen the CV"],
+  "weak_sections": [
+    {{
+      "section": "name of the section",
+      "issue": "what is weak about it",
+      "suggestion": "specific actionable improvement"
+    }}
+  ],
+  "recommended_roles": [
+    {{
+      "role": "job title this candidate is well-suited for",
+      "match_reason": "why this role fits their background",
+      "gap_to_close": "what they'd need to develop to be a stronger fit"
+    }}
+  ],
+  "quick_wins": ["fast, high-impact improvements the candidate can make today"],
+  "keywords_to_add": ["industry/role keywords missing from the CV that recruiters search for"]
+}}
+
+CANDIDATE CV:
+{cv_text}
+"""
+
+
+async def cv_only_gap_analysis(cv_text: str) -> dict:
+    """Analyze a CV on its own (no job description) and suggest improvements and roles."""
+    raw = await claude_generate(_CV_ONLY_GAP_PROMPT.format(cv_text=cv_text), max_tokens=2048)
+    return _extract_json(raw)
+
+
+async def _gap_analysis_openai(cv_text: str, job_description: str) -> dict:
+    raw = await gpt_generate(
+        _GAP_PROMPT.format(cv_text=cv_text, job_description=job_description),
+        max_tokens=2048,
+    )
+    return _extract_json(raw)
+
+
+async def gap_analysis_multi(cv_text: str, job_description: str) -> dict:
+    """Run gap analysis with both Claude and GPT (when available) for a second opinion."""
+    if not OPENAI_AVAILABLE:
+        return {"claude": await gap_analysis(cv_text, job_description), "openai": None}
+
+    claude_result, openai_result = await asyncio.gather(
+        gap_analysis(cv_text, job_description),
+        _gap_analysis_openai(cv_text, job_description),
+        return_exceptions=True,
+    )
+    if isinstance(claude_result, Exception):
+        raise claude_result
+    return {
+        "claude": claude_result,
+        "openai": None if isinstance(openai_result, Exception) else openai_result,
+    }
 
 
 ENRICHMENT_QUESTIONS = [
@@ -262,9 +305,35 @@ async def extract_behavioral_profile(answers: list[str]) -> dict:
     qa_text = "\n\n".join(
         f"Q: {q}\nA: {a}" for q, a in zip(ENRICHMENT_QUESTIONS, answers)
     )
-    msg = await _client.messages.create(
-        model="claude-sonnet-4-6",
-        max_tokens=1500,
-        messages=[{"role": "user", "content": _ENRICHMENT_PROMPT.format(qa_text=qa_text)}],
-    )
-    return _extract_json(msg.content[0].text)
+    raw = await claude_generate(_ENRICHMENT_PROMPT.format(qa_text=qa_text), max_tokens=1500)
+    return _extract_json(raw)
+
+
+_KEYWORD_EXTRACT_PROMPT = """
+You are an expert CV analyst.
+Read this CV and extract the most important professional keywords.
+
+Return JSON only — no markdown:
+{{
+  "job_titles_mentioned":  ["exact job titles from experience"],
+  "core_skills":           ["top 10 technical and soft skills"],
+  "industries":            ["industries this person has worked in"],
+  "seniority_signals":     ["junior|mid|senior|lead|manager|director"],
+  "education_keywords":    ["degree types, fields, institutions"],
+  "search_query":          "a 1-sentence search query describing
+                            the ideal job for this person, written
+                            as if searching a job board"
+}}
+
+CV:
+{cv_text}
+"""
+
+
+async def extract_cv_keywords(cv_text: str) -> dict:
+    """Use Claude to extract structured keywords from a CV.
+
+    These keywords are used to build an embedding for job matching.
+    """
+    raw = await claude_generate(_KEYWORD_EXTRACT_PROMPT.format(cv_text=cv_text), max_tokens=1024)
+    return _extract_json(raw)

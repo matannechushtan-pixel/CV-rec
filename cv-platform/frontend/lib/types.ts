@@ -30,7 +30,106 @@ export interface CV {
   pdf_url?: string | null;
   latex_source?: string | null;
   font_id?: string | null;
+  html_content?: string | null;
+  source?: string | null;
+  language?: string | null;
+  cv_template_id?: string | null;
   created_at: string;
+}
+
+export interface CvContact {
+  location?: string;
+  phone?: string;
+  email?: string;
+}
+
+export interface CvEducationEntry {
+  institution?: string;
+  degree?: string;
+  dates?: string;
+  notes?: string;
+}
+
+export interface CvLanguageEntry {
+  name?: string;
+  level?: string;
+}
+
+export interface CvExperienceEntry {
+  company?: string;
+  location?: string;
+  role?: string;
+  dates?: string;
+  bullets?: string[];
+}
+
+export interface CvMilitary {
+  unit?: string;
+  role?: string;
+  dates?: string;
+  bullets?: string[];
+}
+
+export interface CvVolunteeringEntry {
+  org?: string;
+  year?: string;
+  description?: string;
+}
+
+export interface CvSectionTitles {
+  experience?: string;
+  education?: string;
+  skills?: string;
+  languages?: string;
+  hobbies?: string;
+  military?: string;
+  volunteering?: string;
+  contact?: string;
+}
+
+export interface CvData {
+  full_name?: string;
+  summary?: string;
+  contact?: CvContact;
+  education?: CvEducationEntry[];
+  languages?: CvLanguageEntry[];
+  skills?: string[];
+  hobbies?: string;
+  experience?: CvExperienceEntry[];
+  military?: CvMilitary;
+  volunteering?: CvVolunteeringEntry[];
+  section_titles?: CvSectionTitles;
+  accent_color?: string;
+  font_family?: string;
+  generation_model?: string;
+}
+
+export interface FontOption {
+  id: string;
+  name: string;
+  google: boolean;
+}
+
+export interface AutoGapWeakSection {
+  section: string;
+  issue: string;
+  suggestion: string;
+}
+
+export interface AutoGapRecommendedRole {
+  role: string;
+  match_reason: string;
+  gap_to_close: string;
+}
+
+export interface AutoGapAnalysis {
+  overall_score: number;
+  summary: string;
+  missing_sections: string[];
+  weak_sections: AutoGapWeakSection[];
+  recommended_roles: AutoGapRecommendedRole[];
+  quick_wins: string[];
+  keywords_to_add: string[];
 }
 
 export interface CvFont {
@@ -51,6 +150,15 @@ export interface CvTemplate {
   id: string;
   label: string;
   fields: CvTemplateField[];
+}
+
+export interface CvTemplateInfo {
+  id: string;
+  name: string;
+  has_photo: boolean;
+  design: string;
+  description: string;
+  preview_colors: string[];
 }
 
 export interface JobListing {
@@ -93,6 +201,11 @@ export interface GapAnalysis {
   strong_matches: string[];
   gaps: GapItem[];
   interview_risks: string[];
+}
+
+export interface MultiGapAnalysis {
+  claude: GapAnalysis;
+  openai: GapAnalysis | null;
 }
 
 export interface RoadmapStep {

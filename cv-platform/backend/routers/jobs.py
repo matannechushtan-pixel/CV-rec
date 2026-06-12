@@ -209,6 +209,12 @@ async def recommended_jobs(
     return ranked
 
 
+@router.get("/debug/jsearch-cache")
+async def jsearch_cache_stats(user=Depends(get_current_user)):
+    from services.jsearch import cache_stats
+    return cache_stats()
+
+
 @router.get("/{job_id}/salary")
 async def job_salary(
     job_id: str, user: dict = Depends(get_current_user), db: AsyncSession = Depends(get_db)

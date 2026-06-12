@@ -1,0 +1,57 @@
+# ── Secrets & credentials ────────────────────────────────────
+.env
+.env.local
+.env.*.local
+backend/.env
+backend/.env.*
+backend/gmail_credentials.json
+backend/gmail_token.json
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ── Large data files (rebuild with scripts) ──────────────────
+backend/data/*.npy
+backend/data/jobs_clean.json
+backend/data/resume_atlas_clean.json
+backend/data/all_cv_profiles.json
+backend/data/cv_embeddings_index.json
+backend/data/job_embeddings_index.json
+backend/data/skill_profession_map.json
+backend/data/eda_raw_sample.csv
+
+# ── Node / Next.js ───────────────────────────────────────────
+node_modules/
+.next/
+out/
+frontend/.next/
+frontend/node_modules/
+
+# ── macOS ────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# ── IDEs ─────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Logs ─────────────────────────────────────────────────────
+*.log
+logs/

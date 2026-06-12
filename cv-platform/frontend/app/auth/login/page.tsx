@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { login, signInWithGoogle } from "@/lib/auth";
 import { getUser } from "@/lib/auth";
+import { authErrorFrom } from "@/lib/utils";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -34,10 +35,7 @@ export default function LoginPage() {
       const user = getUser();
       router.push(user?.role === "company_admin" ? "/company" : "/dashboard");
     } catch (err: unknown) {
-      const msg =
-        (err as { response?: { data?: { detail?: string } } })?.response?.data?.detail ??
-        "Login failed";
-      setError(msg);
+      setError(authErrorFrom(err, "Login failed"));
     } finally {
       setLoading(false);
     }

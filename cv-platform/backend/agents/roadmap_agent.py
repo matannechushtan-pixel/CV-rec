@@ -1,6 +1,6 @@
 import json
 
-from core.ai_providers import anthropic_client as _client
+from core.ai_providers import claude_generate
 from services.onet import get_onet_occupation_data
 from agents.cv_agent import _extract_json
 
@@ -65,37 +65,25 @@ CANDIDATE PROFILE:
 
 async def generate_upskill_report(cv_text: str, target_role: str) -> dict:
     onet_data = await get_onet_occupation_data(target_role)
-    msg = await _client.messages.create(
-        model="claude-sonnet-4-6",
+    raw = await claude_generate(
+        _UPSKILL_PROMPT.format(
+            target_role=target_role,
+            onet_data=json.dumps(onet_data, indent=2),
+            cv_text=cv_text,
+        ),
         max_tokens=2048,
-        messages=[
-            {
-                "role": "user",
-                "content": _UPSKILL_PROMPT.format(
-                    target_role=target_role,
-                    onet_data=json.dumps(onet_data, indent=2),
-                    cv_text=cv_text,
-                ),
-            }
-        ],
     )
-    return _extract_json(msg.content[0].text)
+    return _extract_json(raw)
 
 
 async def generate_roadmap(cv_text: str, target_role: str) -> dict:
     onet_data = await get_onet_occupation_data(target_role)
-    msg = await _client.messages.create(
-        model="claude-sonnet-4-6",
+    raw = await claude_generate(
+        _ROADMAP_PROMPT.format(
+            target_role=target_role,
+            onet_data=json.dumps(onet_data, indent=2),
+            cv_text=cv_text,
+        ),
         max_tokens=3000,
-        messages=[
-            {
-                "role": "user",
-                "content": _ROADMAP_PROMPT.format(
-                    target_role=target_role,
-                    onet_data=json.dumps(onet_data, indent=2),
-                    cv_text=cv_text,
-                ),
-            }
-        ],
     )
-    return _extract_json(msg.content[0].text)
+    return _extract_json(raw)
